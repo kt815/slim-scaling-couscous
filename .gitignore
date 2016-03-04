@@ -3,4 +3,4 @@
 /vendor/
 config/database.config.php
 /.idea/*
-output.txt
+logs/output.txt
