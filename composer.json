@@ -1,12 +1,5 @@
 {
     "require": {
         "slim/slim": "2.*"
-    },
-
-    "extra": {
-        "heroku": {
-            "document-root": "public",
-            "index-document": "index.php"
-        }
     }
 }
