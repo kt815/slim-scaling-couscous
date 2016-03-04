@@ -13,3 +13,5 @@ $ heroku create
 $ git push heroku master
 $ heroku open
 ```
+
+This code has deployed in heroku [slim-scaling-couscous](https://agile-sierra-78177.herokuapp.com).
