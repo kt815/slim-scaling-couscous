@@ -5,7 +5,7 @@
 
     "extra": {
         "heroku": {
-            "document-root": "v1",
+            "document-root": "public",
             "index-document": "index.php"
         }
     }
