@@ -4,3 +4,4 @@
 config/database.config.php
 /.idea/*
 logs/output.txt
+.env
