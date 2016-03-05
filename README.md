@@ -3,9 +3,9 @@
 Slim skeleton inspiration
 
 
-## Requirements
+## Requirements for deploying
 
-The tutorial assumes that you have:
+The deploying assumes that you have:
 
 [a free Heroku account](https://signup.heroku.com/signup/dc).
 [PHP installed locally](http://php.net/).
