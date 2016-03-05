@@ -2,6 +2,16 @@
 
 Slim skeleton inspiration
 
+
+## Requirements
+
+The tutorial assumes that you have:
+
+[a free Heroku account](https://signup.heroku.com/signup/dc).
+[PHP installed locally](http://php.net/).
+[Composer installed](https://getcomposer.org/doc/00-intro.md).
+
+
 ## Deploying
 
 Install the [Heroku Toolbelt](https://toolbelt.heroku.com/).
