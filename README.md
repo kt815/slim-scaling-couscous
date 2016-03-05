@@ -7,9 +7,9 @@ Slim skeleton inspiration
 
 The deploying assumes that you have:
 
-[a free Heroku account](https://signup.heroku.com/signup/dc).
-[PHP installed locally](http://php.net/).
-[Composer installed](https://getcomposer.org/doc/00-intro.md).
+* [a free Heroku account](https://signup.heroku.com/signup/dc).
+* [PHP installed locally](http://php.net/).
+* [Composer installed](https://getcomposer.org/doc/00-intro.md).
 
 
 ## Deploying
