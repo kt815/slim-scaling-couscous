@@ -5,3 +5,8 @@ config/database.config.php
 /.idea/*
 logs/output.txt
 .env
+logs/*
+!logs/README.md
+app/views/cache/*
+!app/views/cache/*
+composer.lock
