@@ -56,20 +56,9 @@ foreach(glob(ROUTERS_DIR . 'admin/*.php') as $router) {
 }
 
 require_once(ROOT_APP . '/config.php');
-
-use Illuminate\Database\Eloquent\Model as Model;
-
-//namespace models\Core;
-// use models\Core\Config as Config;
-// require 'app/config/config.php';
- 
-// Define models
-class Users extends Model {}
   
 $app->get('/trial', function () use ($app) {
-	$name = "username";
-//	echo( Users::all() );
-//	echo( Config::trial() );
+	echo( 'hi');
 });
 
 $app->run();

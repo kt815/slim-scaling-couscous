@@ -1,16 +1,19 @@
 <?php 
 
 use Models\Core\Config as Config;
+use Models\Core\Users as Users;
 
 $app->get('/', function() use ($app) {
+
+	$name = "username";
+	echo( Users::all() );
+	exit;
 
 //    Sample log message
     $app->log->info("Slim-Skeleton '/' route");
     $jade = "Hello jade template";
 
-	
-    echo Config::get();
-    exit;
+
 
     $app->render('index.jade', [
     'jade' => $jade
