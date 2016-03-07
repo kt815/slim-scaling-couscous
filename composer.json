@@ -27,7 +27,11 @@
             "index-document":"index.php"
            }
         },
-     "autoload": {
-	"classmap": ["app/models/Core"]
-    }	
+
+    "autoload": {
+        "psr-4": {
+	    "Models\\Core\\": "app/models/core"
+        }
+    }
+
 }

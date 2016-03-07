@@ -1,7 +1,5 @@
 <?php
 
-use models\Core\Config as Config;
-
 ini_set('display_errors', getenv('app.debug'));
 error_reporting(E_ALL);
 
@@ -20,15 +18,9 @@ $app = new \Slim\Slim(array(
 ));
 
 // Environment based configuration
-
-
-
 if (file_exists(ROOT . DS . '.env')) {
 Dotenv::load(__DIR__);} 
 else {die("<pre>File .env missing!</pre>");}
-
-
-
 
 // Create monolog logger and store logger in container as singleton 
 // (Singleton resources retrieve the same log resource definition each time)
@@ -36,13 +28,6 @@ $app->container->singleton('log', function () {
     $log = new \Monolog\Logger('slim-skeleton');
     $log->pushHandler(new \Monolog\Handler\StreamHandler('logs/app.log', \Monolog\Logger::DEBUG));
     return $log;
-});
-
-$app->container->singleton('env', function () {
-
-
-
-    return $env;
 });
 
 // Prepare view
@@ -69,5 +54,22 @@ foreach(glob(ROUTERS_DIR . '*.php') as $router) {
 foreach(glob(ROUTERS_DIR . 'admin/*.php') as $router) {
     require_once $router;
 }
+
+require_once(ROOT_APP . '/config.php');
+
+use Illuminate\Database\Eloquent\Model as Model;
+
+//namespace models\Core;
+// use models\Core\Config as Config;
+// require 'app/config/config.php';
+ 
+// Define models
+class Users extends Model {}
+  
+$app->get('/trial', function () use ($app) {
+	$name = "username";
+//	echo( Users::all() );
+//	echo( Config::trial() );
+});
 
 $app->run();

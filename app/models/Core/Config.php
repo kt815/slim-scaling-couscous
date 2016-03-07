@@ -1,32 +1,11 @@
 <?php
 
-namespace models\Core;
-// use models\Core\Config as Config;
-// require 'app/config/config.php';
+namespace Models\Core;
 
 class Config
 {
 
-	private static $env;
+	public static function get(){
+	return "FROM Core";}
 
-	public static function get($path = null){
-
-		$settings = [];	
-		$settings['app'] = [ 'app_mode' => getenv('app.mode'), 'app_debug' => getenv('app.debug')  ];
-		// self::set();
-
-		if($path)
-		{
-			return $settings;
-		}
-		return false;
-	}
-
-	private static function set() {
-
-		$settings = [];	
-		$settings['app'] = [ 'app_mode' => getenv('app.mode')  ];
-		self::$env = $settings;
-
-	}
 }
