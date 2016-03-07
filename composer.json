@@ -1,12 +1,12 @@
 {
-    "name": "fdisotto/SlimBlog",
-    "description" : "Simple Blog written with Slim Framework",
+    "name": "kt815/slim-scaling-couscous",
+    "description" : "Simple installation with Slim Framework",
     "license": "GPLv3",
     "authors": [
         {
-            "name": "Fabio Di Sotto",
-            "email": "fabio.disotto@gmail.com",
-            "homepage": "https://github.com/fdisotto",
+            "name": "kt815",
+            "email": "s.buharow@gmail.com",
+            "homepage": "https://github.com/kt815",
             "role": "Developer"
         }
     ],
@@ -17,7 +17,9 @@
         "slim/views": "0.*",
         "twig/twig": "1.*",
         "illuminate/database": "*",
-        "erusev/parsedown": "*"
+        "erusev/parsedown": "*",
+	"phpmailer/phpmailer": "~5.2",
+        "vlucas/phpdotenv": "1.1.*"
 
     },
     "extras":{
@@ -26,8 +28,6 @@
            }
         },
      "autoload": {
-	"classmap": [
-	    "app/models/Core"
-		]
+	"classmap": ["app/models/Core"]
     }	
 }

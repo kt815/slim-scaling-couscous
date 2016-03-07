@@ -1,14 +1,33 @@
 <?php
 
-require 'vendor/autoload.php';
+use models\Core\Config as Config;
 
+ini_set('display_errors', getenv('app.debug'));
+error_reporting(E_ALL);
+
+define("DS", DIRECTORY_SEPARATOR);
+define ('ROOT', __DIR__);
+define ('ROOT_APP', ROOT . '/app');
+define("ROUTERS_DIR", ROOT_APP . "/routers" . DS);
+
+require_once(ROOT . '/vendor/autoload.php');
 
 \Slim\Slim::registerAutoloader();
 
-// Prepare app
+// Instantiate the app
 $app = new \Slim\Slim(array(
     'templates.path' => 'views'
 ));
+
+// Environment based configuration
+
+
+
+if (file_exists(ROOT . DS . '.env')) {
+Dotenv::load(__DIR__);} 
+else {die("<pre>File .env missing!</pre>");}
+
+
 
 
 // Create monolog logger and store logger in container as singleton 
@@ -17,6 +36,13 @@ $app->container->singleton('log', function () {
     $log = new \Monolog\Logger('slim-skeleton');
     $log->pushHandler(new \Monolog\Handler\StreamHandler('logs/app.log', \Monolog\Logger::DEBUG));
     return $log;
+});
+
+$app->container->singleton('env', function () {
+
+
+
+    return $env;
 });
 
 // Prepare view
@@ -32,15 +58,16 @@ $app->view->parserOptions = array(
 $app->view->parserExtensions = array(new \Slim\Views\TwigExtension());
 
 
-$app->get('/', function() use ($app) {
+/**
+ * Include all files located in routes directory
+ * require '../app/routers/*.php'; 
+ */
+foreach(glob(ROUTERS_DIR . '*.php') as $router) {
+    require_once $router;
+}
 
-//    Sample log message
-    $app->log->info("Slim-Skeleton '/' route");
-    $jade = "Hello jade template";
-
-    $app->render('index.jade', [
-    'jade' => $jade
-]);
-});
+foreach(glob(ROUTERS_DIR . 'admin/*.php') as $router) {
+    require_once $router;
+}
 
 $app->run();
