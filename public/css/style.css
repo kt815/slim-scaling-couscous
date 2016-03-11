@@ -1,0 +1,206 @@
+i.icon {
+
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: #ebebeb;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -16px;
+}
+
+i.icon::before {
+  content: "";
+  display: block;
+  background: #c2c2c2;
+  width: 10px;
+  height: 10px;
+  border-radius: 1000px;
+  position: absolute;
+  left: 50%;
+  margin-left: -5px;
+  top: 5px;
+}
+
+i.icon::after {
+  content: "";
+  display: block;
+  background: #c2c2c2;
+  width: 20px;
+  height: 10px;
+  border-radius: 1000px 1000px 0 0;
+  display: block;
+  position: absolute;
+  left: 50%;
+  margin-left: -10px;
+  top: 15px;
+
+}
+
+
+
+h6.byline {
+  padding-left: 40px;
+  position: relative;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+
+h6.byline .data {
+  font-weight: 400;
+}
+
+h6.byline .label {
+  font-size: 60%;
+}
+
+
+
+.indented.comment {
+  padding-left: 15px;
+  border-left: 1px solid #ebebeb;
+}
+
+
+
+.push {
+  margin-bottom: 40px;
+}
+
+
+
+.bullets {
+  margin-left: 30px;
+}
+
+
+
+.inline-list {
+    margin: 0 auto 1.0625em auto;
+    margin-left: -1.375em;
+    margin-right: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+}
+
+
+.inline-list > li {
+    list-style: none;
+    float: left;
+    margin-left: 1.375em;
+    display: block;
+}
+
+
+section.top {
+background: #eee;
+
+}
+
+
+.border_form {
+
+border: 1px solid black;
+
+}
+
+
+.blog-post .callout {
+
+background-color: #def0fc !important;
+
+}
+
+
+/*FOOTER*/
+
+.full-width {
+
+  max-width: 1400px;
+
+}
+
+
+
+.footer {
+
+  background-color: #2980b9;
+
+  padding: 2rem 4rem;
+
+  text-align: center;
+
+  color: #fff;
+
+}
+
+.footer i {
+
+  font-size: 100px;
+
+}
+
+
+
+.footer h4 {
+
+  color: #fff;
+
+  font-size: 1em;
+
+  font-weight: 400;
+
+  text-transform: uppercase;
+
+  margin-top: 2.5rem;
+
+  margin-bottom: 10px;
+
+}
+
+.footer p, .footer a {
+
+  font-weight: 300;
+
+  font-size: .8em;
+
+  color: #fff;
+
+}
+
+
+
+@media only screen and (min-width: 40.063em) {
+
+  .footer .columns:nth-child(n+2) {
+
+    border-left: 1px solid #b3b3b3;
+
+    min-height: 280px;
+
+  }
+
+}
+
+.footer-links {
+
+  list-style-type: none;
+
+}
+
+.footer-links li {
+
+  margin-top: .5em;
+
+}
+
+
+/*LOGIN*/
+
+.log-in-form {
+  border: 1px solid #cacaca;
+  padding: 1rem;
+  border-radius: 3px; }

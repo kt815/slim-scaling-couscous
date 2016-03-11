@@ -9,4 +9,3 @@ logs/*
 !logs/README.md
 app/views/cache/*
 !app/views/cache/*
-composer.lock

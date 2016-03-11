@@ -1,0 +1,29 @@
+<div class="row column">
+<ul class="pagination" role="navigation" aria-label="Pagination">
+<li class="{% if page == 1 %}disabled{% endif %}">
+{% if page > 1 %}
+  <a href="{{ baseUrl() }}/{{page-1}}">Previous</a>
+{% else %}
+  Previous
+{% endif %}
+</li>
+{% for i in 1..pages %}
+<li class="{% if page == i %}current{% endif %}">
+{% if page == i %}
+  <span class="show-for-sr">You're on page</span>{{i}}
+{% else %}  
+  <a href="{{ baseUrl() }}/{{i}}">{{i}}</a>
+{% endif %}
+  
+</li>
+{% endfor %}
+
+<li class="{% if page == pages %}disabled{% endif %}">
+  {% if page < pages %}
+    <a href="{{ baseUrl() }}/{{page+1}}">Next</a>
+  {% else %}
+    <span>Next</span>
+  {% endif %}
+</li>
+</ul>
+</div>
