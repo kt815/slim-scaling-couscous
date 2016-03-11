@@ -17,6 +17,8 @@ $app = new \Slim\Slim(array(
     'templates.path' => 'views'
 ));
 
+$app->add(new \Slim\Middleware\SessionCookie(array()));
+
 // Environment based configuration
 if (file_exists(ROOT . DS . '.env')) {
 Dotenv::load(__DIR__);} 
@@ -41,6 +43,33 @@ $app->view->parserOptions = array(
     'autoescape' => true
 );
 $app->view->parserExtensions = array(new \Slim\Views\TwigExtension());
+
+
+$isNoLogged = function($app) {
+    return function() use ($app) {
+        if (!isset($_SESSION['user'])) {
+            $app->flash('error', 'Login required');
+            $app->redirect('/admin/login');
+        }
+    };
+};
+
+
+$isLogged = function($app) {
+    return function() use ($app) {
+        if (isset($_SESSION['user'])) {
+            $app->redirect('/admin');
+        }
+    };
+};
+
+
+/**
+ * Markdown support
+ */
+$app->container->singleton('markdown', function () {
+    return Parsedown::instance();
+});
 
 
 /**

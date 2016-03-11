@@ -19,7 +19,8 @@
         "illuminate/database": "*",
         "erusev/parsedown": "*",
 	"phpmailer/phpmailer": "~5.2",
-        "vlucas/phpdotenv": "1.1.*"
+        "vlucas/phpdotenv": "1.1.*",
+	"oodle/krumo": "*"
 
     },
     "extras":{
