@@ -204,3 +204,11 @@ background-color: #def0fc !important;
   border: 1px solid #cacaca;
   padding: 1rem;
   border-radius: 3px; }
+
+/*centred*/
+
+.center-block {
+  display: block;
+  margin: 0 auto; 
+
+}

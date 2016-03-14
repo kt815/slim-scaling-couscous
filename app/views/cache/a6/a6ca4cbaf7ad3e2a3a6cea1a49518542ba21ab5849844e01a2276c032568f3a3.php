@@ -24,52 +24,52 @@ class __TwigTemplate_7aa95e6e1f67d56171447a37ddbb0dc2ad1c1de00ca13e5e99f7d5b5859
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
 
-    // line 4
+    // line 3
     public function block_content($context, array $blocks = array())
     {
+        // line 4
+        echo "
+";
         // line 5
-        echo "
-";
+        $this->loadTemplate("home/home.top_nav.html", "home.html", 5)->display($context);
         // line 6
-        $this->loadTemplate("home.top_nav.html", "home.html", 6)->display($context);
+        $this->loadTemplate("home/home.title.html", "home.html", 6)->display($context);
         // line 7
-        $this->loadTemplate("home.title.html", "home.html", 7)->display($context);
-        // line 8
         echo "
-
 <div class=\"row\" id=\"content\">
-<div class=\"medium-8 columns\">
+\t<div class=\"medium-8 columns\">
 
-";
-        // line 13
-        $this->loadTemplate("home.lists_post.html", "home.html", 13)->display($context);
-        // line 14
+\t\t\t";
+        // line 11
+        $this->loadTemplate("home/posts/home.lists_post.html", "home.html", 11)->display($context);
+        // line 12
         echo "
-</div>
-<div class=\"medium-3 columns\" data-sticky-container>
-<div class=\"sticky\" data-sticky data-anchor=\"content\">
-<h4>Categories</h4>
-<ul>
-<li><a href=\"#\">Skyler</a></li>
-<li><a href=\"#\">Jesse</a></li>
-<li><a href=\"#\">Mike</a></li>
-<li><a href=\"#\">Holly</a></li>
-</ul>
-<h4>Authors</h4>
-<ul>
-<li><a href=\"#\">Skyler</a></li>
-<li><a href=\"#\">Jesse</a></li>
-<li><a href=\"#\">Mike</a></li>
-<li><a href=\"#\">Holly</a></li>
-</ul>
-</div>
-</div>
+\t</div>
+
+\t<div class=\"medium-3 columns\" data-sticky-container>
+\t\t<div class=\"sticky\" data-sticky data-anchor=\"content\">
+\t\t\t<h4>Categories</h4>
+\t\t\t<ul>
+\t\t\t<li><a href=\"#\">Skyler</a></li>
+\t\t\t<li><a href=\"#\">Jesse</a></li>
+\t\t\t<li><a href=\"#\">Mike</a></li>
+\t\t\t<li><a href=\"#\">Holly</a></li>
+\t\t\t</ul>
+\t\t\t<h4>Authors</h4>
+\t\t\t<ul>
+\t\t\t<li><a href=\"#\">Skyler</a></li>
+\t\t\t<li><a href=\"#\">Jesse</a></li>
+\t\t\t<li><a href=\"#\">Mike</a></li>
+\t\t\t<li><a href=\"#\">Holly</a></li>
+\t\t\t</ul>
+\t\t</div>
+\t</div>
 </div>
 
 ";
+        // line 35
+        $this->loadTemplate("home/home.paginator.html", "home.html", 35)->display($context);
         // line 36
-        $this->loadTemplate("home.paginator.html", "home.html", 36)->display($context);
-        // line 37
         echo "
 ";
     }
@@ -86,44 +86,43 @@ class __TwigTemplate_7aa95e6e1f67d56171447a37ddbb0dc2ad1c1de00ca13e5e99f7d5b5859
 
     public function getDebugInfo()
     {
-        return array (  73 => 37,  71 => 36,  47 => 14,  45 => 13,  38 => 8,  36 => 7,  34 => 6,  31 => 5,  28 => 4,  11 => 1,);
+        return array (  73 => 36,  71 => 35,  46 => 12,  44 => 11,  38 => 7,  36 => 6,  34 => 5,  31 => 4,  28 => 3,  11 => 1,);
     }
 }
 /* {% extends "base.html" %}*/
 /* */
-/* */
 /* {% block content %}*/
 /* */
-/* {% include 'home.top_nav.html' %}*/
-/* {% include 'home.title.html' %}*/
-/* */
+/* {% include 'home/home.top_nav.html' %}*/
+/* {% include 'home/home.title.html' %}*/
 /* */
 /* <div class="row" id="content">*/
-/* <div class="medium-8 columns">*/
+/* 	<div class="medium-8 columns">*/
 /* */
-/* {% include 'home.lists_post.html' %}*/
+/* 			{% include 'home/posts/home.lists_post.html' %}*/
 /* */
-/* </div>*/
-/* <div class="medium-3 columns" data-sticky-container>*/
-/* <div class="sticky" data-sticky data-anchor="content">*/
-/* <h4>Categories</h4>*/
-/* <ul>*/
-/* <li><a href="#">Skyler</a></li>*/
-/* <li><a href="#">Jesse</a></li>*/
-/* <li><a href="#">Mike</a></li>*/
-/* <li><a href="#">Holly</a></li>*/
-/* </ul>*/
-/* <h4>Authors</h4>*/
-/* <ul>*/
-/* <li><a href="#">Skyler</a></li>*/
-/* <li><a href="#">Jesse</a></li>*/
-/* <li><a href="#">Mike</a></li>*/
-/* <li><a href="#">Holly</a></li>*/
-/* </ul>*/
-/* </div>*/
-/* </div>*/
+/* 	</div>*/
+/* */
+/* 	<div class="medium-3 columns" data-sticky-container>*/
+/* 		<div class="sticky" data-sticky data-anchor="content">*/
+/* 			<h4>Categories</h4>*/
+/* 			<ul>*/
+/* 			<li><a href="#">Skyler</a></li>*/
+/* 			<li><a href="#">Jesse</a></li>*/
+/* 			<li><a href="#">Mike</a></li>*/
+/* 			<li><a href="#">Holly</a></li>*/
+/* 			</ul>*/
+/* 			<h4>Authors</h4>*/
+/* 			<ul>*/
+/* 			<li><a href="#">Skyler</a></li>*/
+/* 			<li><a href="#">Jesse</a></li>*/
+/* 			<li><a href="#">Mike</a></li>*/
+/* 			<li><a href="#">Holly</a></li>*/
+/* 			</ul>*/
+/* 		</div>*/
+/* 	</div>*/
 /* </div>*/
 /* */
-/* {% include 'home.paginator.html' %}*/
+/* {% include 'home/home.paginator.html' %}*/
 /* */
 /* {% endblock %}*/

@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-lg-4">
+
+        <form class="form-signin" method="post" action="{{ baseUrl() }}/admin/users/edit/{{user.id}}">
+
+            {% if error is not empty %}
+                <h3 class="text-center"><span class="label label-danger">
+                    {% if error == 1 %}
+                      Empty Username
+                    {% elseif error == 2 %}
+                        Wrong Email Format or Empty
+                    {% endif %}
+                </span></h3>
+            {% endif %}
+
+
+            {% if success is not empty %}
+                <h3 class="text-center"><span class="label label-success">
+                    {% if success == 1 %}
+                      User has successfully updated!
+                    {% endif %}
+                </span></h3>
+            {% endif %}
+
+
+            <h2 class="form-signin-heading">Edit <strong>{{user.username}}</strong></h2><br />
+
+            <label for="username" class="control-label">Username</label>
+            <input type="text" name="username" class="form-control" id="username" value="{{user.username}}" required><br />
+
+            <label for="email" class="control-label">Email</label>
+            <input type="email" name="email" class="form-control" id="email" value="{{user.email}}" required><br />
+
+            <label for="password" class="control-label">Password</label>
+            <input type="text" name="password" class="form-control" id="password" placeholder="New Password"><br />
+
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Update User</button>
+        </form>

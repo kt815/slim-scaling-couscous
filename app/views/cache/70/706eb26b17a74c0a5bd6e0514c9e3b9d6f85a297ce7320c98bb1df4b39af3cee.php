@@ -49,20 +49,19 @@ class __TwigTemplate_6d31282d71341020dab9e1b98ec34983b2a8a6a7c65acc431737afe037d
 </head>
 <body>
  
-        ";
+    ";
         // line 20
         $this->displayBlock('content', $context, $blocks);
         // line 22
         echo "
-
 \t";
+        // line 23
+        $this->loadTemplate("home/home.footer.html", "base.html", 23)->display($context);
         // line 24
-        $this->loadTemplate("footer.html", "base.html", 24)->display($context);
-        // line 25
         echo "
 <script src=\"http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js\"></script>
 <script>
-      \$(document).foundation();
+    \$(document).foundation();
     </script>
 </body>
 </html>
@@ -73,7 +72,7 @@ class __TwigTemplate_6d31282d71341020dab9e1b98ec34983b2a8a6a7c65acc431737afe037d
     public function block_content($context, array $blocks = array())
     {
         // line 21
-        echo "        ";
+        echo "    ";
     }
 
     public function getTemplateName()
@@ -88,7 +87,7 @@ class __TwigTemplate_6d31282d71341020dab9e1b98ec34983b2a8a6a7c65acc431737afe037d
 
     public function getDebugInfo()
     {
-        return array (  76 => 21,  73 => 20,  62 => 25,  60 => 24,  56 => 22,  54 => 20,  45 => 14,  41 => 12,  36 => 9,  30 => 8,  28 => 7,  20 => 1,);
+        return array (  75 => 21,  72 => 20,  61 => 24,  59 => 23,  56 => 22,  54 => 20,  45 => 14,  41 => 12,  36 => 9,  30 => 8,  28 => 7,  20 => 1,);
     }
 }
 /* <!doctype html>*/
@@ -110,15 +109,14 @@ class __TwigTemplate_6d31282d71341020dab9e1b98ec34983b2a8a6a7c65acc431737afe037d
 /* </head>*/
 /* <body>*/
 /*  */
-/*         {% block content %}*/
-/*         {% endblock %}*/
+/*     {% block content %}*/
+/*     {% endblock %}*/
 /* */
-/* */
-/* 	{% include 'footer.html' %}*/
+/* 	{% include 'home/home.footer.html' %}*/
 /* */
 /* <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>*/
 /* <script>*/
-/*       $(document).foundation();*/
+/*     $(document).foundation();*/
 /*     </script>*/
 /* </body>*/
 /* </html>*/

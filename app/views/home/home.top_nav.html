@@ -1,0 +1,23 @@
+<div class="top-bar">
+	<div class="top-bar-left">
+		<ul class="menu">
+			<li class="menu-text"><a href="/">Yeti Agency</a></li>
+		</ul>
+	</div>
+
+	<div class="top-bar-right">
+		<ul class="menu">
+			<li><a href="#">{{ menu.one }}</a></li>
+			<li><a href="#">{{ menu.two }}</a></li>
+			<li><a href="#">{{ menu.three }}</a></li>
+			<li><a href="#">{{ menu.four }}</a></li>
+
+		{%  if menu.username is not empty %}
+			<li><a href="/admin">Admin</a></li>
+			<li><a href="/logout"><i class="fa fa-sign-in"></i> Logout ({{ menu.username }})</a></li>
+		{%  else %}
+			<li><a href="/admin/login"><i class="fa fa-sign-in"></i> Login </a></li>
+		{% endif  %}
+		</ul>
+	</div>
+</div>

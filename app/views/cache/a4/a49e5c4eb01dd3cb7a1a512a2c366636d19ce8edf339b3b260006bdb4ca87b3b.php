@@ -22,7 +22,7 @@ class __TwigTemplate_1bcd9fcdf501ee19041a5935bbc70a675b0bb59bf9647d591a99b438f00
             // line 2
             echo "
 <div class=\"blog-post\">
-<h3><a href=\"";
+\t<h3><a href=\"";
             // line 4
             echo twig_escape_filter($this->env, $this->getAttribute($context["post"], "url", array()), "html", null, true);
             echo "\">";
@@ -30,29 +30,29 @@ class __TwigTemplate_1bcd9fcdf501ee19041a5935bbc70a675b0bb59bf9647d591a99b438f00
             echo "</a> <small>";
             echo twig_escape_filter($this->env, $this->getAttribute($context["post"], "date", array()), "html", null, true);
             echo "</small></h3>
-<img class=\"thumbnail\" src=\"http://placehold.it/850x350\">
-<p>";
+\t<img class=\"thumbnail\" src=\"http://placehold.it/850x350\">
+\t<p>";
             // line 6
             echo twig_escape_filter($this->env, $this->getAttribute($context["post"], "text", array()), "html", null, true);
             echo "</p>
-<div class=\"callout\">
-<ul class=\"menu simple\">
-<li><a href=\"#\">Author: ";
+\t<div class=\"callout\">
+\t\t<ul class=\"menu simple\">
+\t\t\t<li><a href=\"#\">Author: ";
             // line 9
             echo twig_escape_filter($this->env, $this->getAttribute($context["post"], "author", array()), "html", null, true);
             echo "</a></li>
-<li><a href=\"#\">Comments: ";
+\t\t\t<li><a href=\"#\">Comments: ";
             // line 10
             echo twig_escape_filter($this->env, $this->getAttribute($context["post"], "count", array()), "html", null, true);
             echo "</a></li>
-<li><a href=\"";
+\t\t\t<li><a href=\"";
             // line 11
             echo twig_escape_filter($this->env, $this->getAttribute($context["post"], "url", array()), "html", null, true);
             echo "\">Read more: ";
             echo twig_escape_filter($this->env, $this->getAttribute($context["post"], "count", array()), "html", null, true);
             echo "</a></li>
-</ul>
-</div>
+\t\t</ul>
+\t</div>
 </div>
 
 ";
@@ -80,16 +80,16 @@ class __TwigTemplate_1bcd9fcdf501ee19041a5935bbc70a675b0bb59bf9647d591a99b438f00
 /* {% for post in posts %}*/
 /* */
 /* <div class="blog-post">*/
-/* <h3><a href="{{post.url}}">{{post.title}}</a> <small>{{post.date}}</small></h3>*/
-/* <img class="thumbnail" src="http://placehold.it/850x350">*/
-/* <p>{{post.text}}</p>*/
-/* <div class="callout">*/
-/* <ul class="menu simple">*/
-/* <li><a href="#">Author: {{post.author}}</a></li>*/
-/* <li><a href="#">Comments: {{post.count}}</a></li>*/
-/* <li><a href="{{post.url}}">Read more: {{post.count}}</a></li>*/
-/* </ul>*/
-/* </div>*/
+/* 	<h3><a href="{{post.url}}">{{post.title}}</a> <small>{{post.date}}</small></h3>*/
+/* 	<img class="thumbnail" src="http://placehold.it/850x350">*/
+/* 	<p>{{post.text}}</p>*/
+/* 	<div class="callout">*/
+/* 		<ul class="menu simple">*/
+/* 			<li><a href="#">Author: {{post.author}}</a></li>*/
+/* 			<li><a href="#">Comments: {{post.count}}</a></li>*/
+/* 			<li><a href="{{post.url}}">Read more: {{post.count}}</a></li>*/
+/* 		</ul>*/
+/* 	</div>*/
 /* </div>*/
 /* */
 /* {% endfor %}*/

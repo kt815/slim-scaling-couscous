@@ -17,9 +17,9 @@ class __TwigTemplate_77f15b36ec24c1afb52cd1763fd86afca6422710ed56953abe93f87532c
     {
         // line 1
         echo "<div class=\"callout large primary\">
-<div class=\"row column text-center\">
-<h1>Our Blog</h1>
-</div>
+\t<div class=\"row column text-center\">
+\t\t<h1>Our Blog</h1>
+\t</div>
 </div>
 ";
     }
@@ -35,8 +35,8 @@ class __TwigTemplate_77f15b36ec24c1afb52cd1763fd86afca6422710ed56953abe93f87532c
     }
 }
 /* <div class="callout large primary">*/
-/* <div class="row column text-center">*/
-/* <h1>Our Blog</h1>*/
-/* </div>*/
+/* 	<div class="row column text-center">*/
+/* 		<h1>Our Blog</h1>*/
+/* 	</div>*/
 /* </div>*/
 /* */

@@ -17,13 +17,9 @@ class __TwigTemplate_e967cc37d691be690e8749290bcddee9772624c7533d9778d9ea24c261a
     {
         // line 1
         echo "<!-- For Foundation Icons, put this in your head -->
-
 <link href=\"http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css\" rel=\"stylesheet\">
 
-
-
 <!-- Footer -->
-
 <footer class=\"footer\">
   <div class=\"row full-width\">
     <div class=\"small-12 medium-3 large-4 columns\">
@@ -62,13 +58,9 @@ class __TwigTemplate_e967cc37d691be690e8749290bcddee9772624c7533d9778d9ea24c261a
     }
 }
 /* <!-- For Foundation Icons, put this in your head -->*/
-/* */
 /* <link href="http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" rel="stylesheet">*/
 /* */
-/* */
-/* */
 /* <!-- Footer -->*/
-/* */
 /* <footer class="footer">*/
 /*   <div class="row full-width">*/
 /*     <div class="small-12 medium-3 large-4 columns">*/

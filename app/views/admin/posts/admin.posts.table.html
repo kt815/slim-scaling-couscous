@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h2>List of Posts</h2>
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th><span class="glyphicon glyphicon-th-large"></span></th>
+                        <th>Title</th>
+                        <th>State</th>
+                        <th>Author</th>
+                        <th>Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for post in posts %}
+                        <tr>
+                            <td>{{loop.index}}</td>
+                            <td><a href="{{ baseUrl() }}/post/{{post.id}}">{{post.title}}</a></td>
+                            <td>
+                                {% if post.active is sameas("true") %}
+                                    Activate/<a href="{{ baseUrl() }}/admin/posts/deactivate/{{post.id}}">Deactivate</a>
+                                {% else %}
+                                    <a href="{{ baseUrl() }}/admin/posts/activate/{{post.id}}">Activate</a>/Deactivate
+                                {% endif %}
+                            </td>
+                            <td>{{post.author}}</td>
+                            <td>{{post.date}}</td>
+                            <td><a href="{{ baseUrl() }}/admin/posts/edit/{{post.id}}">Edit</a> | <a href="{{ baseUrl() }}/admin/posts/delete/{{post.id}}">Delete</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+</div>
+</div>  

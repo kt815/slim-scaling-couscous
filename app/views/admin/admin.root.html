@@ -1,0 +1,42 @@
+{% extends "admin/admin.base.html" %}
+
+{% block content %}
+
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    {% include 'admin/admin.top-nav.html' %}
+    {% include 'admin/admin.navigation.html' %}
+</nav>
+
+    <div id="wrapper">
+        <div id="page-wrapper">
+            <div class="container-fluid">
+                {% include 'admin/admin.breadcrumb.html' %}
+
+                {% if action == '' %} 
+                    <h1>Empty Admin Page</h1>
+                {% elseif action == 'Posts' %}
+                	{% include 'admin/posts/admin.posts.table.html' %}
+                {% elseif action == 'Post New' %}
+                	{% include 'admin/posts/admin.posts.new.html' %}
+                {% elseif action == 'Post Edit' %}
+                    {% include 'admin/posts/admin.posts.edit.html' %}
+                {% elseif action == 'Post Delete' %}
+                    {% include 'admin/posts/admin.posts.delete.html' %}    
+                {% elseif action == 'Users List' %}
+                    {% include 'admin/users/admin.users.table.html' %}      
+                {% elseif action == 'User Edit' %}
+                    {% include 'admin/users/admin.users.edit.html' %}
+                {% elseif action == 'User Delete' %}
+                    {% include 'admin/users/admin.users.delete.html' %}        
+                {% elseif action == 'New User' %}
+                    {% include 'admin/users/admin.users.new.html' %} 
+                {% endif %}
+
+            </div>
+            <!-- /.container-fluid -->
+        </div>
+        <!-- /#page-wrapper -->
+    </div>
+    <!-- /#wrapper -->
+
+{% endblock %}

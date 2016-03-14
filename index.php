@@ -14,8 +14,27 @@ require_once(ROOT . '/vendor/autoload.php');
 
 // Instantiate the app
 $app = new \Slim\Slim(array(
-    'templates.path' => 'views'
+    'mode' => getenv('app.dev'),
+    'templates.path' => 'views',
+    'cookies.lifetime' => '20 minutes'
 ));
+
+// Only invoked if mode is "production"
+$app->configureMode('production', function () use ($app) {
+    $app->config(array(
+        'log.enable' => false,
+        'debug' => false
+    ));
+});
+
+// Only invoked if mode is "development"
+$app->configureMode('development', function () use ($app) {
+    $app->config(array(
+        'log.enable' => false,
+        'debug' => true
+    ));
+});
+
 
 $app->add(new \Slim\Middleware\SessionCookie(array()));
 
@@ -27,7 +46,7 @@ else {die("<pre>File .env missing!</pre>");}
 // Create monolog logger and store logger in container as singleton 
 // (Singleton resources retrieve the same log resource definition each time)
 $app->container->singleton('log', function () {
-    $log = new \Monolog\Logger('slim-skeleton');
+    $log = new \Monolog\Logger('slim-app');
     $log->pushHandler(new \Monolog\Handler\StreamHandler('logs/app.log', \Monolog\Logger::DEBUG));
     return $log;
 });
@@ -81,6 +100,10 @@ foreach(glob(ROUTERS_DIR . '*.php') as $router) {
 }
 
 foreach(glob(ROUTERS_DIR . 'admin/*.php') as $router) {
+    require_once $router;
+}
+
+foreach(glob(ROUTERS_DIR . '*/*/*.php') as $router) {
     require_once $router;
 }
 
