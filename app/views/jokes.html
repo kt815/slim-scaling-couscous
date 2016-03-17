@@ -1,0 +1,22 @@
+{% extends "jokes.base.html" %}
+
+{% block content %}
+
+{% include 'home/home.top_nav.html' %}
+{% include 'home/home.title.html' %}
+
+{% include 'home/jokes/jokes.promo.html' %}
+
+<div class="row column">
+<hr>
+</div>
+
+
+<div class="row" id="content">
+
+{% include 'home/jokes/jokes.lists.html' %}
+
+</div>
+
+
+{% endblock %}

@@ -1,7 +1,10 @@
 <div class="top-bar">
 	<div class="top-bar-left">
 		<ul class="menu">
-			<li class="menu-text"><a href="/">Yeti Agency</a></li>
+			<li class="menu-text">Yeti Agency</li>
+			<li role="menuitem"><a href="/"><i class="fa fa-home"></i> Home </a></li>
+			<li role="menuitem"><a href="#">First</a></li>
+			<li role="menuitem"><a href="#">Second</a></li>
 		</ul>
 	</div>
 
@@ -13,10 +16,10 @@
 			<li><a href="#">{{ menu.four }}</a></li>
 
 		{%  if menu.username is not empty %}
-			<li><a href="/admin">Admin</a></li>
+			<li><a href="/admin" class="button">Admin</a></li>
 			<li><a href="/logout"><i class="fa fa-sign-in"></i> Logout ({{ menu.username }})</a></li>
 		{%  else %}
-			<li><a href="/admin/login"><i class="fa fa-sign-in"></i> Login </a></li>
+			<li><a href="/admin/login" class="button"><i class="fa fa-sign-in"></i> Login </a></li>
 		{% endif  %}
 		</ul>
 	</div>

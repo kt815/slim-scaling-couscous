@@ -18,9 +18,10 @@ $app->group('/admin', function () use ($app, $isLogged, $isNoLogged) {
             $post['date'] = date('d-m-Y H:i', $post['creation']);
             $post['url'] = '/post/' . $post['id'];
             $arr[] = $post;
-
-            $action = "Posts";
         }
+
+        $action = "Posts";
+
         $app->render('admin/admin.root.html', array('posts' => $arr, 'action' => $action, 'menu' => $menu_top_nav));
 
     });
