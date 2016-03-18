@@ -1,7 +1,4 @@
-<div class="one-marker">
-
 		{% for joke in jokes %}	
-			{% if joke.index in [1, 4, 7] %}
 				<div class="callout">
 					<p>
 					<span class="fa-stack fa-lg">
@@ -14,8 +11,4 @@
 					<p class="lead">{{joke.title}}</p>
 					<p class="subheader">{{joke.text}}</p>
 				</div>
-		{% endif %}
 		{% endfor %}
-
-
-</div>
