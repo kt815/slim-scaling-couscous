@@ -14,8 +14,12 @@
 
 <div class="row medium-8 large-7 columns" id="content">
 
-{% include 'home/jokes/jokes.lists.html' %}
-
+                {% if action == 'Jokes' %} 
+					{% include 'home/jokes/jokes.lists.html' %}                    
+                {% elseif action == 'Search' %}
+                	{% include 'home/jokes/jokes.search.html' %}
+                {% endif %}
+                
 </div>
 
 

@@ -13,20 +13,32 @@ is no weather, and there is regularity. It is predictable. Everything in
 </div>
 <div class="medium-5 large-3 columns">
 <div class="callout secondary">
-<form>
-<div class="row">
-<div class="small-12 columns">
-<label>Find Your Dream Planet
-<input placeholder="Search destinations" type="text">
-</label>
-</div>
-<div class="small-12 columns">
-<label>Number of Moons
-<input placeholder="Moons required" type="number">
-</label>
-<button type="submit" class="button">Search Now!</button>
-</div>
-</div>
+<form action="" method="get">
+	<div class="row">
+		<div class="small-12 columns">
+			<label for="author">Поиск по автору:
+				<select name="id" id="author">                    
+	          				<option value="">Укажите автора</option>
+					{% for user in users %}	          				
+			            	<option value="{{ user.id }}">{{ user.username }}</option>
+                    {% endfor %}
+			    </select>
+			</label>
+		</div>
+		<div class="small-12 columns">
+			<label>Выбирите категорию
+     <select name="category" id="category">
+          <option value="">Укажите катергорию</option>
+					{% for category in categories %}	          				
+			            	<option value="{{ category.id }}">{{ category.name }}</option>
+                    {% endfor %}
+		        </select>
+			</label>
+
+		<input type="hidden" name="action" value="search">
+		<button type="submit" class="button">Search Now!</button>
+	</div>
+	</div>
 </form>
 </div>
 </div>

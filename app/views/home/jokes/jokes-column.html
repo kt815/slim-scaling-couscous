@@ -1,0 +1,23 @@
+		{% for joke in jokes %}	
+				<div class="callout">
+					<p>
+					<span class="fa-stack fa-lg">
+					  <i class="fa fa-square-o fa-stack-2x text-grey"></i>
+					  <i class="fa fa-user-md fa-stack-1x text-blue	"></i>
+					</span>
+
+					{{joke.author}}&nbsp;&nbsp;&nbsp;&nbsp;{{joke.id}}</p>
+					<p></p>
+					<p class="lead">{{joke.title}}</p>
+					<p class="subheader">{{joke.text}}</p>
+
+			<p>
+			{% for category in joke.categories %}
+				{% for cat in category %}
+					<div class="category"><i class="fa fa-bookmark-o fa-1"></i> <a href="/jokes/category/{{cat.id}}">{{cat.name}}</a></div>
+				{% endfor %}		
+			{% endfor %}
+			</p>
+
+				</div>				
+		{% endfor %}

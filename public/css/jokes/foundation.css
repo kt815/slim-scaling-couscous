@@ -13,3 +13,19 @@ color: #1583CC
         cursor: default;
         opacity: 0.6;
 	}
+
+.lead span {
+
+background: #1583CC;
+color: white;
+
+}
+
+
+.category {
+
+
+display: inline-block;
+padding-right: 20px;
+
+}

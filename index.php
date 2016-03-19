@@ -110,7 +110,10 @@ foreach(glob(ROUTERS_DIR . '*/*/*.php') as $router) {
 require_once(ROOT_APP . '/config.php');
   
 $app->get('/trial', function () use ($app) {
-	echo( 'hi');
+
+	$var = $app->request->params('id');
+
+	echo($var);
 });
 
 $app->run();
