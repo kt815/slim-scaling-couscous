@@ -20,12 +20,16 @@ class Jokes extends Model {
         foreach ($jokes as $joke) {
             $joke['author'] = Users::get_author($joke['author_id']);
             $joke['date'] = $joke['jokedate'];
+            if (isset($joke['joke_id'])) {$joke['id'] = $joke['joke_id'];}
             $joke['url'] = '/jokes/' . $joke['id'];
             $joke['text'] = $joke['joketext'];
             $i = $i + 1;
             $joke['index'] = $i;
 
-            $categories_id = JokeCategory::get_categoriesid_by_jokeid($joke['id']);
+if (isset($joke['joke_id'])) {$categories_id = JokeCategory::get_categoriesid_by_jokeid($joke['joke_id']);}
+else {$categories_id = JokeCategory::get_categoriesid_by_jokeid($joke['id']);}
+
+
             $cats = [];
 
                 foreach ($categories_id as $category_id) {

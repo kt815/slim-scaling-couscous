@@ -3,17 +3,15 @@
 <div class="row column">
 <p class="lead"><i class="fa fa-smile-o"></i>  Самые смешные шутки 
 
-{% if author %}
-от <span>&nbsp;{{author}}&nbsp;
+{% if author and category %}
+<br> от пользователя <span>&nbsp;{{ author }}&nbsp;</span> в категории <span>&nbsp;{{category}}&nbsp;</span>
+{% elseif author %}
+от <span>&nbsp;{{author}}&nbsp;</span>
+{% elseif category %}
+в категории <span>&nbsp;{{category}}&nbsp;</span>
 {% endif %}
-
-{% if category %}
-в категории <span>&nbsp;{{category}}&nbsp;
-{% endif %}
-
 </span></p>
 </div>
-
 <div class="jokes-column">
 		{% include 'home/jokes/jokes-column.html' %}
 </div>

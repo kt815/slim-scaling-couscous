@@ -14,14 +14,27 @@ $app->get('/jokes', function() use($app) {
     $categories = Category::all();
 
 if($app->request->params('action') == 'search'){
-
-    if (Users::find($app->request->params('id')) && Category::find($app->request->params('category'))) {
-
-    }
+    if ($author = Users::find($app->request->params('id')) && $category = Category::find($app->request->params('category'))) {
+    $author_id = $app->request->params('id');
+    $category_id = $app->request->params('category');
+    $author = Users::find($author_id);
+    $author = $author->username;
+    $category_name = Category::find($category_id);
+    $category_name = $category_name->name;
+    $jokes = Jokes
+        ::join('users', 'author_id', '=', 'users.id')
+        ->join('jokecategory', 'jokes.id', '=', 'joke_id')
+        ->where('category_id', '=', $category_id)
+        ->where('users.id', '=', $author_id)
+        ->get();
+    $count = count($jokes);
+    $arr = Jokes::view_jokes($jokes);
+    $action = "Search";
+    $app->render('jokes.html', ['jokes' => $arr, 'menu' => $menu, 'action' => $action, 'count' => $count, 'author' => $author, 'category' => $category_name, 'users' => $users, 'categories' => $categories ]);
+    exit;}
 
 
     else if ($author = Users::find($app->request->params('id'))) {
-
         $id = $app->request->params('id');
         $jokes = Jokes::get_jokes_by_author($id);
         $author = $author['username'];
@@ -29,12 +42,9 @@ if($app->request->params('action') == 'search'){
         $arr = Jokes::view_jokes($jokes);
         $action = "Search";
         $app->render('jokes.html', ['jokes' => $arr, 'menu' => $menu, 'action' => $action, 'count' => $count, 'author' => $author, 'users' => $users, 'categories' => $categories ]);
-        exit;
-
-    }
+        exit; }
 
     else if ($category = Category::find($app->request->params('category'))) {
-
         $category_name = $category['name'];
         $id = $app->request->params('category');
         $jokes = JokeCategory::get_jokesid_by_categoryid($id);
@@ -47,10 +57,8 @@ if($app->request->params('action') == 'search'){
         $category = Category::get_category_by_id($id);
         $action = "Search";
         $app->render('jokes.html', ['jokes' => $arr, 'menu' => $menu, 'action' => $action, 'count' => $count, 'category' => $category_name, 'users' => $users, 'categories' => $categories ]);
-        exit;        
+        exit;}
     }
-
-}
 
         $jokes = Jokes::orderBy('jokedate')->get();        
         $count = count($jokes);

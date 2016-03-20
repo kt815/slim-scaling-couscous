@@ -30,7 +30,7 @@ is no weather, and there is regularity. It is predictable. Everything in
      <select name="category" id="category">
           <option value="">Укажите катергорию</option>
 					{% for category in categories %}	          				
-			            	<option value="{{ category.id }}">{{ category.name }}</option>
+			            	<option class="options" value="{{ category.id }}">{{ category.name }}</option>
                     {% endfor %}
 		        </select>
 			</label>

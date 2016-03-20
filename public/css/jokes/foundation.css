@@ -29,3 +29,10 @@ display: inline-block;
 padding-right: 20px;
 
 }
+
+.options:hover, 
+.options:focus, 
+.options:active, 
+.options:checked {
+  background: red !important;
+}
