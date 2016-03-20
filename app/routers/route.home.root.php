@@ -5,10 +5,14 @@ use Models\Core\Users as Users;
 use Models\Core\Posts as Posts;
 use Models\Core\Comments as Comments;
 use Models\Core\Menus as Menus;
+use Models\Core\Category as Category;
+
 
 $app->get('/(:page)', function($page = 1) use ($app) {
 
     $menu = Menus::menu_home();
+    $categories = Category::all();
+    $authors = Users::all();
 
     $p = Posts::where('active', '=', 'true')->count();
     $post_per_page = getenv('post.per.page');
@@ -51,7 +55,9 @@ $app->get('/(:page)', function($page = 1) use ($app) {
     'posts' => $array,
     'page' => $page,
     'pages' => $pages,
-    'menu' => $menu
+    'menu' => $menu,
+    'categories' => $categories,
+    'authors' => $authors
 ]);
 
 })->conditions(array('page' => '\d+'));

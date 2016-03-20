@@ -48,28 +48,20 @@ class __TwigTemplate_7aa95e6e1f67d56171447a37ddbb0dc2ad1c1de00ca13e5e99f7d5b5859
 
 \t<div class=\"medium-3 columns\" data-sticky-container>
 \t\t<div class=\"sticky\" data-sticky data-anchor=\"content\">
-\t\t\t<h4>Categories</h4>
-\t\t\t<ul>
-\t\t\t<li><a href=\"#\">Skyler</a></li>
-\t\t\t<li><a href=\"#\">Jesse</a></li>
-\t\t\t<li><a href=\"#\">Mike</a></li>
-\t\t\t<li><a href=\"#\">Holly</a></li>
-\t\t\t</ul>
-\t\t\t<h4>Authors</h4>
-\t\t\t<ul>
-\t\t\t<li><a href=\"#\">Skyler</a></li>
-\t\t\t<li><a href=\"#\">Jesse</a></li>
-\t\t\t<li><a href=\"#\">Mike</a></li>
-\t\t\t<li><a href=\"#\">Holly</a></li>
-\t\t\t</ul>
+
+\t\t";
+        // line 18
+        $this->loadTemplate("home/home.right_side.html", "home.html", 18)->display($context);
+        // line 19
+        echo "
 \t\t</div>
 \t</div>
 </div>
 
 ";
-        // line 35
-        $this->loadTemplate("home/home.paginator.html", "home.html", 35)->display($context);
-        // line 36
+        // line 24
+        $this->loadTemplate("home/home.paginator.html", "home.html", 24)->display($context);
+        // line 25
         echo "
 ";
     }
@@ -86,7 +78,7 @@ class __TwigTemplate_7aa95e6e1f67d56171447a37ddbb0dc2ad1c1de00ca13e5e99f7d5b5859
 
     public function getDebugInfo()
     {
-        return array (  73 => 36,  71 => 35,  46 => 12,  44 => 11,  38 => 7,  36 => 6,  34 => 5,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  65 => 25,  63 => 24,  56 => 19,  54 => 18,  46 => 12,  44 => 11,  38 => 7,  36 => 6,  34 => 5,  31 => 4,  28 => 3,  11 => 1,);
     }
 }
 /* {% extends "base.html" %}*/
@@ -105,20 +97,9 @@ class __TwigTemplate_7aa95e6e1f67d56171447a37ddbb0dc2ad1c1de00ca13e5e99f7d5b5859
 /* */
 /* 	<div class="medium-3 columns" data-sticky-container>*/
 /* 		<div class="sticky" data-sticky data-anchor="content">*/
-/* 			<h4>Categories</h4>*/
-/* 			<ul>*/
-/* 			<li><a href="#">Skyler</a></li>*/
-/* 			<li><a href="#">Jesse</a></li>*/
-/* 			<li><a href="#">Mike</a></li>*/
-/* 			<li><a href="#">Holly</a></li>*/
-/* 			</ul>*/
-/* 			<h4>Authors</h4>*/
-/* 			<ul>*/
-/* 			<li><a href="#">Skyler</a></li>*/
-/* 			<li><a href="#">Jesse</a></li>*/
-/* 			<li><a href="#">Mike</a></li>*/
-/* 			<li><a href="#">Holly</a></li>*/
-/* 			</ul>*/
+/* */
+/* 		{% include 'home/home.right_side.html' %}*/
+/* */
 /* 		</div>*/
 /* 	</div>*/
 /* </div>*/

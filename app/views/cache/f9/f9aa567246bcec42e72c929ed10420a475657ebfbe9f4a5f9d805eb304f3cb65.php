@@ -21,7 +21,7 @@ class __TwigTemplate_b0438c2f487698e1aaa7064e485e7c248dcacde3a8cd6bdb417139c6943
 \t\t<ul class=\"menu\">
 \t\t\t<li class=\"menu-text\">Yeti Agency</li>
 \t\t\t<li role=\"menuitem\"><a href=\"/\"><i class=\"fa fa-home\"></i> Home </a></li>
-\t\t\t<li role=\"menuitem\"><a href=\"#\">First</a></li>
+\t\t\t<li role=\"menuitem\"><a href=\"/jokes\">Jokes</a></li>
 \t\t\t<li role=\"menuitem\"><a href=\"#\">Second</a></li>
 \t\t</ul>
 \t</div>
@@ -49,7 +49,7 @@ class __TwigTemplate_b0438c2f487698e1aaa7064e485e7c248dcacde3a8cd6bdb417139c6943
         // line 18
         if ( !twig_test_empty($this->getAttribute((isset($context["menu"]) ? $context["menu"] : null), "username", array()))) {
             // line 19
-            echo "\t\t\t<li><a href=\"/admin\" class=\"button\">Admin</a></li>
+            echo "\t\t\t<li><a href=\"/admin\" class=\"button\">Admin area</a></li>
 \t\t\t<li><a href=\"/logout\"><i class=\"fa fa-sign-in\"></i> Logout (";
             // line 20
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["menu"]) ? $context["menu"] : null), "username", array()), "html", null, true);
@@ -86,7 +86,7 @@ class __TwigTemplate_b0438c2f487698e1aaa7064e485e7c248dcacde3a8cd6bdb417139c6943
 /* 		<ul class="menu">*/
 /* 			<li class="menu-text">Yeti Agency</li>*/
 /* 			<li role="menuitem"><a href="/"><i class="fa fa-home"></i> Home </a></li>*/
-/* 			<li role="menuitem"><a href="#">First</a></li>*/
+/* 			<li role="menuitem"><a href="/jokes">Jokes</a></li>*/
 /* 			<li role="menuitem"><a href="#">Second</a></li>*/
 /* 		</ul>*/
 /* 	</div>*/
@@ -99,7 +99,7 @@ class __TwigTemplate_b0438c2f487698e1aaa7064e485e7c248dcacde3a8cd6bdb417139c6943
 /* 			<li><a href="#">{{ menu.four }}</a></li>*/
 /* */
 /* 		{%  if menu.username is not empty %}*/
-/* 			<li><a href="/admin" class="button">Admin</a></li>*/
+/* 			<li><a href="/admin" class="button">Admin area</a></li>*/
 /* 			<li><a href="/logout"><i class="fa fa-sign-in"></i> Logout ({{ menu.username }})</a></li>*/
 /* 		{%  else %}*/
 /* 			<li><a href="/admin/login" class="button"><i class="fa fa-sign-in"></i> Login </a></li>*/

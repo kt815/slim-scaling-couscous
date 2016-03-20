@@ -37,7 +37,7 @@ class __TwigTemplate_80148de0993519731699c052041a1d07a96b07e3dc15c011a6f84df7d7a
                             <a href=\"#\">
                                 <div class=\"media\">
                                     <span class=\"pull-left\">
-                                        <img class=\"media-object\" src=\"admin_files/50x50.png\" alt=\"\">
+                                        <img class=\"media-object\" src=\"/public/files/50x50.png\" alt=\"\">
                                     </span>
                                     <div class=\"media-body\">
                                         <h5 class=\"media-heading\"><strong>John Smith</strong>
@@ -52,7 +52,7 @@ class __TwigTemplate_80148de0993519731699c052041a1d07a96b07e3dc15c011a6f84df7d7a
                             <a href=\"#\">
                                 <div class=\"media\">
                                     <span class=\"pull-left\">
-                                        <img class=\"media-object\" src=\"admin_files/50x50.png\" alt=\"\">
+                                        <img class=\"media-object\" src=\"/public/files/50x50.png\" alt=\"\">
                                     </span>
                                     <div class=\"media-body\">
                                         <h5 class=\"media-heading\"><strong>John Smith</strong>
@@ -67,7 +67,7 @@ class __TwigTemplate_80148de0993519731699c052041a1d07a96b07e3dc15c011a6f84df7d7a
                             <a href=\"#\">
                                 <div class=\"media\">
                                     <span class=\"pull-left\">
-                                        <img class=\"media-object\" src=\"admin_files/50x50.png\" alt=\"\">
+                                        <img class=\"media-object\" src=\"/public/files/50x50.png\" alt=\"\">
                                     </span>
                                     <div class=\"media-body\">
                                         <h5 class=\"media-heading\"><strong>John Smith</strong>
@@ -146,7 +146,7 @@ class __TwigTemplate_80148de0993519731699c052041a1d07a96b07e3dc15c011a6f84df7d7a
 /*                             <a href="#">*/
 /*                                 <div class="media">*/
 /*                                     <span class="pull-left">*/
-/*                                         <img class="media-object" src="admin_files/50x50.png" alt="">*/
+/*                                         <img class="media-object" src="/public/files/50x50.png" alt="">*/
 /*                                     </span>*/
 /*                                     <div class="media-body">*/
 /*                                         <h5 class="media-heading"><strong>John Smith</strong>*/
@@ -161,7 +161,7 @@ class __TwigTemplate_80148de0993519731699c052041a1d07a96b07e3dc15c011a6f84df7d7a
 /*                             <a href="#">*/
 /*                                 <div class="media">*/
 /*                                     <span class="pull-left">*/
-/*                                         <img class="media-object" src="admin_files/50x50.png" alt="">*/
+/*                                         <img class="media-object" src="/public/files/50x50.png" alt="">*/
 /*                                     </span>*/
 /*                                     <div class="media-body">*/
 /*                                         <h5 class="media-heading"><strong>John Smith</strong>*/
@@ -176,7 +176,7 @@ class __TwigTemplate_80148de0993519731699c052041a1d07a96b07e3dc15c011a6f84df7d7a
 /*                             <a href="#">*/
 /*                                 <div class="media">*/
 /*                                     <span class="pull-left">*/
-/*                                         <img class="media-object" src="admin_files/50x50.png" alt="">*/
+/*                                         <img class="media-object" src="/public/files/50x50.png" alt="">*/
 /*                                     </span>*/
 /*                                     <div class="media-body">*/
 /*                                         <h5 class="media-heading"><strong>John Smith</strong>*/

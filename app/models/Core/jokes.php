@@ -24,6 +24,17 @@ class Jokes extends Model {
             $joke['text'] = $joke['joketext'];
             $i = $i + 1;
             $joke['index'] = $i;
+
+            $categories_id = JokeCategory::get_categoriesid_by_jokeid($joke['id']);
+            $cats = [];
+
+                foreach ($categories_id as $category_id) {
+                    $cats[] = Category::get_category_by_id($category_id['category_id']);
+
+                }   
+
+            $joke['categories'] = $cats;    
+
             $arr[] = $joke;
         }
 
