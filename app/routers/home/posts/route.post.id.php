@@ -42,7 +42,7 @@ $app->get('/post/:id', function($id) use ($app) {
 })->conditions(array('id' => '\d+'));
 
 
-$app->post('/post/comment/new', function() use($app, $settings) {
+$app->post('/post/comment/new', function() use($app) {
     $username = $app->request->post('username');
     $email = $app->request->post('email');
     $post_id = $app->request->post('post_id');
@@ -52,19 +52,19 @@ $app->post('/post/comment/new', function() use($app, $settings) {
 
     if($username == "") {
         $app->flash('error', 1);
-        $app->redirect($settings->base_url . '/post/' . $post_id);
+        $app->redirect(getenv('base.url') . '/post/' . $post_id);
     }
     if($url == "") {
         $app->flash('error', 2);
-        $app->redirect($settings->base_url . '/post/' . $post_id);
+        $app->redirect(getenv('base.url') . '/post/' . $post_id);
     }
     if($email == "") {
         $app->flash('error', 3);
-        $app->redirect($settings->base_url . '/post/' . $post_id);
+        $app->redirect(getenv('base.url') . '/post/' . $post_id);
     }
     if($text == "") {
         $app->flash('error', 4);
-        $app->redirect($settings->base_url . '/post/' . $post_id);
+        $app->redirect(getenv('base.url') . '/post/' . $post_id);
     }
 
     Comments::insert(array('username' => $username, 'url' => $url, 'email' => $email, 'text' => $text, 'posts_id' => $post_id));

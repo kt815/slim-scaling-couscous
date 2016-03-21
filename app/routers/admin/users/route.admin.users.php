@@ -106,7 +106,7 @@ $app->group('/admin', function () use ($app, $isLogged, $isNoLogged) {
         }
         if($email == "" OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $app->flash('error', 3);
-            $app->redirect($settings->base_url . '/admin/users/new');
+            $app->redirect(getenv('base.url') . '/admin/users/new');
         }
 
         Users::insert(array('username' => $username, 'password' => $password, 'email' => $email, 'created_at' => $created_at));

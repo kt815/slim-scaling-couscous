@@ -60,18 +60,24 @@ if($app->request->params('action') == 'search'){
         exit;}
     }
 
-        $jokes = Jokes::orderBy('jokedate')->get();        
+        $jokes = Jokes::get_jokes();        
         $count = count($jokes);
         if ($count > 9) {
             $count = $count - 9;
             $take = 9; }
         else {
             $take = $count; }
-        $jokes = Jokes::orderBy('jokedate')->take($take)->get();
+        $jokes = Jokes::orderBy('created_at')->take($take)->get();
         $arr = Jokes::view_jokes($jokes);
         $action = "Jokes";
         $app->render('jokes.html', ['jokes' => $arr, 'menu' => $menu, 'action' => $action, 'count' => $count, 'users' => $users, 'categories' => $categories ]);
 });
+
+$app->get('/jokes/:jokeId', function($jokeId) use ($app) {
+
+echo $jokeId;
+
+})->conditions(array('jokeId' => '\d+'));
 
 $app->post('/jokes', function() use($app) {
 
@@ -79,7 +85,7 @@ $app->post('/jokes', function() use($app) {
 
         // sleep(5);
 
-        $jokes = Jokes::orderBy('jokedate')->get();    
+        $jokes = Jokes::orderBy('created_at')->get();    
         $skip = count($jokes) - $_POST['count'];        
 
        $render = [];
@@ -93,7 +99,7 @@ $app->post('/jokes', function() use($app) {
             $render['count'] = 0;
         }        
 
-        $jokes = Jokes::orderBy('jokedate')->skip($skip)->take($take)->get();
+        $jokes = Jokes::orderBy('created_at')->skip($skip)->take($take)->get();
 
         $arr = Jokes::view_jokes($jokes);     
 

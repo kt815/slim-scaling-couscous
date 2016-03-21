@@ -3,7 +3,7 @@
 /vendor/
 /.idea/*
 logs/output.txt
-# .env
+.env
 logs/*
 !logs/README.md
 /app/views/cache/*

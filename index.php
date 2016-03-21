@@ -19,6 +19,10 @@ $app = new \Slim\Slim(array(
     'cookies.lifetime' => '20 minutes'
 ));
 
+$app->error(function (\Exception $e) use ($app) {
+ $app->halt(500, "error");
+});
+
 // Only invoked if mode is "production"
 $app->configureMode('production', function () use ($app) {
     $app->config(array(
@@ -108,12 +112,20 @@ foreach(glob(ROUTERS_DIR . '*/*/*.php') as $router) {
 }
 
 require_once(ROOT_APP . '/config.php');
+
+use Models\Core\Jokes as Jokes;
   
 $app->get('/trial', function () use ($app) {
+	$id = 83;
+	$title = "Childrens !!!";
+	$joketext = "Womans !!!";
+	$author_id = 1;
 
-	$var = $app->request->params('id');
+	
+	try {Jokes::delete_joke($id);} 
+	catch (Exception $e) {echo "ssss";}
 
-	echo($var);
+//	kd($var);
 });
 
-$app->run();
+$app->run();          	
