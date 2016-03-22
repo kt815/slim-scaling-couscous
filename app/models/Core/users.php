@@ -20,29 +20,20 @@ class Users extends Model {
         return $user->id;
     }
 
-    public static function get_username() {
-        
+    public static function get_username() {        
 		if (isset($_SESSION['user'])) {
 		    $user = Users::where('email', '=', $_SESSION['user'])->first();
-		    $username = $user->username;
-		  }
-		else {
-			$username = '';
-		}		
+		    $username = $user->username; } 
+        else { $username = ''; }		
 
         return $username;
     }
 
     public static function get_logged_id() {
-
 		if (isset($_SESSION['user'])) {
 		    $user = Users::where('email', '=', $_SESSION['user'])->first();
-		    $user_id = $user->id;
-		  }
-		else {
-			$user_id = '';
-		}		
-
+		    $user_id = $user->id;}
+		else {$user_id = '';}		
         return $user_id;
     }
 

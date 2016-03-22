@@ -1,0 +1,8 @@
+<div class="container center-block">
+  <form class="form-signin" method="post" action="{{baseUrl() }}/admin/jokes/delete/{{id}}">
+    <h2>Delete Joke {{id}}</h2>
+    <h3>Are you sure?</h3>  
+    <input type="hidden" name="_METHOD" value="DELETE"/>
+    <button class="btn btn-lg btn-primary" type="submit">Delete Joke</button>
+  </form>
+</div>

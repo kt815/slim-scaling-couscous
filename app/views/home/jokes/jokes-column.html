@@ -8,16 +8,15 @@
 
 					{{joke.author}}&nbsp;&nbsp;&nbsp;&nbsp;{{joke.id}}</p>
 					<p></p>
-					<p class="lead">{{joke.title}}</p>
+					<a href='/jokes/{{joke.id}}'><p class="lead">{{joke.title}}</p></a>
 					<p class="subheader">{{joke.text}}</p>
 
 			<p>
 			{% for category in joke.categories %}
 				{% for cat in category %}
-					<div class="category"><i class="fa fa-bookmark-o fa-1"></i> <a href="/jokes/category/{{cat.id}}">{{cat.name}}</a></div>
+					<div class="category"><i class="fa fa-bookmark-o fa-1"></i> <a href="/jokes/category/{{cat.id}}">{{cat.name}}</div>
 				{% endfor %}		
 			{% endfor %}
 			</p>
-
 				</div>				
 		{% endfor %}

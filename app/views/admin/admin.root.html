@@ -30,7 +30,17 @@
                     {% include 'admin/users/admin.users.delete.html' %}        
                 {% elseif action == 'New User' %}
                     {% include 'admin/users/admin.users.new.html' %} 
+                {% elseif action == 'Jokes' %}
+                    {% include 'admin/jokes/admin.jokes.table.html' %} 
+                {% elseif action == 'Joke New' %}
+                    {% include 'admin/jokes/admin.jokes.new.html' %} 
+                {% elseif action == 'Joke Edit' %}
+                    {% include 'admin/jokes/admin.jokes.edit.html' %}
+                {% elseif action == 'Joke Delete' %}
+                    {% include 'admin/jokes/admin.jokes.delete.html' %}        
+
                 {% endif %}
+
 
             </div>
             <!-- /.container-fluid -->

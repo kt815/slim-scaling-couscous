@@ -17,12 +17,13 @@ class Jokes extends Model {
         $joke = Jokes::find($id);
         return $joke; } // function get_jokes
 
-    public static function add_joke($title, $text, $author_id) {
+    public static function add_joke($title, $text, $author_id, $joke_categories) {        
         $joke = new Jokes;
         $joke->title = $title;
         $joke->joketext = $text;
         $joke->author_id = $author_id;
         $joke->save();
+        $joke_id = $joke->id;
         return $joke; } // function add_jokes
 
     public static function update_joke($id, $title, $text, $author_id) {
@@ -37,7 +38,6 @@ class Jokes extends Model {
     public static function delete_joke($id) {
         $joke = Jokes::find($id);    
         return $joke->delete(); } // function delete_jokes
-
 
 
     public static function get_jokes_by_author($id) {

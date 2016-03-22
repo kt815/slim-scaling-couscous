@@ -3,9 +3,7 @@
 {% block content %}
 
 {% include 'home/home.top_nav.html' %}
-{% include 'home/home.title.html' %}
 
-{% include 'home/jokes/jokes.promo.html' %}
 
 <div class="row">
 <hr>
@@ -15,9 +13,7 @@
 <div class="row medium-8 large-7 columns" id="content">
 
                 {% if action == 'Jokes' %} 
-			{% include 'home/jokes/jokes.lists.html' %}                    
-                {% elseif action == 'Search' %}
-                	{% include 'home/jokes/jokes.search.html' %}
+			{% include 'home/jokes/joke.html' %}                    
                 {% endif %}
                 
 </div>

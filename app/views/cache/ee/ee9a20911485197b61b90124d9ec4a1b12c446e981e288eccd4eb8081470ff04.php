@@ -105,9 +105,38 @@ class __TwigTemplate_b428953354f0826843abe467bb6bdcc1e3c2498ba7991563f44c9691347
             $this->loadTemplate("admin/users/admin.users.new.html", "admin/admin.root.html", 32)->display($context);
             echo " 
                 ";
+        } elseif ((        // line 33
+(isset($context["action"]) ? $context["action"] : null) == "Jokes")) {
+            // line 34
+            echo "                    ";
+            $this->loadTemplate("admin/jokes/admin.jokes.table.html", "admin/admin.root.html", 34)->display($context);
+            echo " 
+                ";
+        } elseif ((        // line 35
+(isset($context["action"]) ? $context["action"] : null) == "Joke New")) {
+            // line 36
+            echo "                    ";
+            $this->loadTemplate("admin/jokes/admin.jokes.new.html", "admin/admin.root.html", 36)->display($context);
+            echo " 
+                ";
+        } elseif ((        // line 37
+(isset($context["action"]) ? $context["action"] : null) == "Joke Edit")) {
+            // line 38
+            echo "                    ";
+            $this->loadTemplate("admin/jokes/admin.jokes.edit.html", "admin/admin.root.html", 38)->display($context);
+            // line 39
+            echo "                ";
+        } elseif (((isset($context["action"]) ? $context["action"] : null) == "Joke Delete")) {
+            // line 40
+            echo "                    ";
+            $this->loadTemplate("admin/jokes/admin.jokes.delete.html", "admin/admin.root.html", 40)->display($context);
+            echo "        
+
+                ";
         }
-        // line 34
+        // line 43
         echo "
+
             </div>
             <!-- /.container-fluid -->
         </div>
@@ -130,7 +159,7 @@ class __TwigTemplate_b428953354f0826843abe467bb6bdcc1e3c2498ba7991563f44c9691347
 
     public function getDebugInfo()
     {
-        return array (  110 => 34,  104 => 32,  102 => 31,  97 => 30,  94 => 29,  91 => 28,  89 => 27,  84 => 26,  82 => 25,  77 => 24,  74 => 23,  71 => 22,  68 => 21,  65 => 20,  62 => 19,  59 => 18,  57 => 17,  52 => 15,  49 => 14,  47 => 13,  40 => 8,  37 => 7,  35 => 6,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  138 => 43,  131 => 40,  128 => 39,  125 => 38,  123 => 37,  118 => 36,  116 => 35,  111 => 34,  109 => 33,  104 => 32,  102 => 31,  97 => 30,  94 => 29,  91 => 28,  89 => 27,  84 => 26,  82 => 25,  77 => 24,  74 => 23,  71 => 22,  68 => 21,  65 => 20,  62 => 19,  59 => 18,  57 => 17,  52 => 15,  49 => 14,  47 => 13,  40 => 8,  37 => 7,  35 => 6,  31 => 4,  28 => 3,  11 => 1,);
     }
 }
 /* {% extends "admin/admin.base.html" %}*/
@@ -165,7 +194,17 @@ class __TwigTemplate_b428953354f0826843abe467bb6bdcc1e3c2498ba7991563f44c9691347
 /*                     {% include 'admin/users/admin.users.delete.html' %}        */
 /*                 {% elseif action == 'New User' %}*/
 /*                     {% include 'admin/users/admin.users.new.html' %} */
+/*                 {% elseif action == 'Jokes' %}*/
+/*                     {% include 'admin/jokes/admin.jokes.table.html' %} */
+/*                 {% elseif action == 'Joke New' %}*/
+/*                     {% include 'admin/jokes/admin.jokes.new.html' %} */
+/*                 {% elseif action == 'Joke Edit' %}*/
+/*                     {% include 'admin/jokes/admin.jokes.edit.html' %}*/
+/*                 {% elseif action == 'Joke Delete' %}*/
+/*                     {% include 'admin/jokes/admin.jokes.delete.html' %}        */
+/* */
 /*                 {% endif %}*/
+/* */
 /* */
 /*             </div>*/
 /*             <!-- /.container-fluid -->*/

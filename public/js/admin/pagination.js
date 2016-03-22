@@ -36,7 +36,7 @@ function PaginatorObj() {
         myArray.forEach(function(item, myArray) {
             var a = item['categories'];
             var v = myForEach(a);
-            var myVar = "<div class=\"callout\"><span class=\"fa-stack fa-lg\"><i class=\"fa fa-square-o fa-stack-2x text-grey\"><\/i><i class=\"fa fa-user-md fa-stack-1x text-blue    \"><\/i><\/span>" + item['author'] + "&nbsp;&nbsp;&nbsp;&nbsp;" + item['id'] + "<\/p><p><\/p><p class=\"lead\">"  + item['title'] +  "<\/p><p class=\"subheader\">" + item['text'] + "<\/p><p>" + v + "<\/p><\/div>";
+            var myVar = "<div class=\"callout\"><span class=\"fa-stack fa-lg\"><i class=\"fa fa-square-o fa-stack-2x text-grey\"><\/i><i class=\"fa fa-user-md fa-stack-1x text-blue    \"><\/i><\/span>" + item['author'] + "&nbsp;&nbsp;&nbsp;&nbsp;" + item['id'] + "<\/p><p><\/p><a href=\"/jokes/" + item['id'] + "\"><p class=\"lead\">"  + item['title'] +  "<\/p><\/a><p class=\"subheader\">" + item['text'] + "<\/p><p>" + v + "<\/p><\/div>";
             _addContent_Column(myVar); });  } //function _addContent
 
     function _addContent_Column(data) { 

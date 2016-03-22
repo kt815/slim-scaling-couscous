@@ -75,7 +75,14 @@ if($app->request->params('action') == 'search'){
 
 $app->get('/jokes/:jokeId', function($jokeId) use ($app) {
 
-echo $jokeId;
+    $menu = Menus::menu_home();
+    $joke = Jokes::get_joke($jokeId);
+    if($joke == NULL) {$error = 1;}
+    else {$error = "";}
+    $a = array($joke);
+    $arr = Jokes::view_jokes($a);   
+    $action = "Jokes"; 
+    $app->render('joke.html', ['action' => $action, 'jokes' => $arr, 'menu' => $menu, 'error' => $error]);
 
 })->conditions(array('jokeId' => '\d+'));
 
@@ -85,27 +92,21 @@ $app->post('/jokes', function() use($app) {
 
         // sleep(5);
 
-        $jokes = Jokes::orderBy('created_at')->get();    
-        $skip = count($jokes) - $_POST['count'];        
-
+       $jokes = Jokes::get_jokes();    
+       $skip = count($jokes) - $_POST['count'];        
        $render = [];
-
         if ($_POST['count'] > 9) {    
             $take = 9;
-            $render['count'] = $_POST['count'] - 9;
-        }
+            $render['count'] = $_POST['count'] - 9;}
         else {
             $take = $_POST['count'];
-            $render['count'] = 0;
-        }        
+            $render['count'] = 0;}        
 
         $jokes = Jokes::orderBy('created_at')->skip($skip)->take($take)->get();
-
         $arr = Jokes::view_jokes($jokes);     
 
        $render['jokes'] = $arr;
        echo json_encode($render);  
-
    }
 
 });
