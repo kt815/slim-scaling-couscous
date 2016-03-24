@@ -125,7 +125,7 @@ $app->group('/admin', function () use ($app, $isLogged, $isNoLogged) {
     $app->delete('/jokes/delete/:id', $isNoLogged($app), function($id) use ($app) {
         $joke = Jokes::where('id', '=', $id)->first();
         if($joke){
-            Jokes::destroy($id);
+            Jokes::delete_joke($id);
             $app->redirect('/admin/jokes');}
         else {$app->redirect('/admin/jokes');}
     })->conditions(array('id' => '\d+'));

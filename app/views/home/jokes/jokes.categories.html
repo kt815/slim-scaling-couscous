@@ -1,0 +1,15 @@
+	<div class="medium-12 columns">
+
+<div class="row column">
+<p class="lead"><i class="fa fa-smile-o"></i>&nbsp;&nbsp;&nbsp;Categories</p>
+</div>
+<div class="categories-column">
+				<div class="callout">
+<h5>Категрии шуток</h5>
+{% for category in categories %}	
+	<span class="secondary label"><a href="/jokes/categories/{{category.id}}">{{category.name}}</a></span>
+{% endfor  %}
+</div>
+				</div>				
+</div>
+	</div>

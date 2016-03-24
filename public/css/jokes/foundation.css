@@ -36,3 +36,21 @@ padding-right: 20px;
 .options:checked {
   background: red !important;
 }
+
+.label a {
+color: white;
+}
+
+.categories-column .callout {
+
+padding-top: 40px;
+padding-bottom: 40px;
+
+}
+
+.label.secondary {
+
+margin-bottom: 10px;
+margin-left: 5px;
+
+}

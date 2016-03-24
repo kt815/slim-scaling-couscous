@@ -34,15 +34,20 @@ class Jokes extends Model {
         $joke->save();
         return $joke; } // function update_jokes
 
-
     public static function delete_joke($id) {
-        $joke = Jokes::find($id);    
-        return $joke->delete(); } // function delete_jokes
-
+        $joke = Jokes::find($id);
+        $jokeCategory = JokeCategory::find($id);} // function delete_jokes
 
     public static function get_jokes_by_author($id) {
         $jokes = Jokes::where('author_id', '=', $id)->orderBy('created_at')->get();
         return $jokes; } // function get_jokes_by_author
+
+    public static function get_jokes_by_jokecategory($jokesid) {
+        $a = [];
+        foreach ($jokesid as $joke) {
+            $joke = Jokes::find($joke['joke_id']);            
+            $a[] = $joke;}
+            return $a; } // get_jokes_by_jokecategory
 
     public static function view_jokes($jokes) {        
         $arr = array();

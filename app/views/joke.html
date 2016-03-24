@@ -14,9 +14,14 @@
 
                 {% if action == 'Jokes' %} 
 			{% include 'home/jokes/joke.html' %}                    
+                {% elseif action == 'Categories' %} 
+			{% include 'home/jokes/jokes.categories.html' %}                    
+                {% elseif action == 'Category' %}
+                	{% include 'home/jokes/jokes.category.html' %}
+
                 {% endif %}
+
                 
 </div>
-
 
 {% endblock %}

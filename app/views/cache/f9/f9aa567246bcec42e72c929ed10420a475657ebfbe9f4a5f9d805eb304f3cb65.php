@@ -20,9 +20,9 @@ class __TwigTemplate_b0438c2f487698e1aaa7064e485e7c248dcacde3a8cd6bdb417139c6943
 \t<div class=\"top-bar-left\">
 \t\t<ul class=\"menu\">
 \t\t\t<li class=\"menu-text\">Yeti Agency</li>
-\t\t\t<li role=\"menuitem\"><a href=\"/\"><i class=\"fa fa-home\"></i> Home </a></li>
-\t\t\t<li role=\"menuitem\"><a href=\"/jokes\">Jokes</a></li>
-\t\t\t<li role=\"menuitem\"><a href=\"#\">Second</a></li>
+\t\t\t<li role=\"menuitem\"><a href=\"/\"><i class=\"fa fa-home\"></i> Главная </a></li>
+\t\t\t<li role=\"menuitem\"><a href=\"/jokes\">Все шутки</a></li>
+\t\t\t<li role=\"menuitem\"><a href=\"/jokes/categories\">Шутки по категориям</a></li>
 \t\t</ul>
 \t</div>
 
@@ -85,9 +85,9 @@ class __TwigTemplate_b0438c2f487698e1aaa7064e485e7c248dcacde3a8cd6bdb417139c6943
 /* 	<div class="top-bar-left">*/
 /* 		<ul class="menu">*/
 /* 			<li class="menu-text">Yeti Agency</li>*/
-/* 			<li role="menuitem"><a href="/"><i class="fa fa-home"></i> Home </a></li>*/
-/* 			<li role="menuitem"><a href="/jokes">Jokes</a></li>*/
-/* 			<li role="menuitem"><a href="#">Second</a></li>*/
+/* 			<li role="menuitem"><a href="/"><i class="fa fa-home"></i> Главная </a></li>*/
+/* 			<li role="menuitem"><a href="/jokes">Все шутки</a></li>*/
+/* 			<li role="menuitem"><a href="/jokes/categories">Шутки по категориям</a></li>*/
 /* 		</ul>*/
 /* 	</div>*/
 /* */

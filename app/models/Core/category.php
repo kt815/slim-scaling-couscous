@@ -9,11 +9,13 @@ class Category extends Model {
 
     protected $table = "category";
 
+    public static function get_categories() {
+        $categories = Category::all();
+        return $categories;}
 
     public static function get_category_by_id($id) {
         $category = Category::where('id', '=', $id)->get();
-        return $category;
-    }
+        return $category;}
 
     public static function view_categories($arr) {        
 		$categories = Category::all();
@@ -25,6 +27,7 @@ class Category extends Model {
 			if(in_array($category->id, $a)) {
 				$category->check = true;}}
         return $categories;} // function view_jokes
+
 
 
 }
