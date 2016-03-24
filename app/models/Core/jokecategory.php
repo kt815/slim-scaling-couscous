@@ -27,7 +27,7 @@ class JokeCategory extends Model {
         return true;}   
 
     public static function update_categories($joke_id, $joke_categories) {
-		JokeCategory::delete_jokecategory($joke_id);
+		JokeCategory::delete_jokecategory_by_jokeid($joke_id);
         foreach ($joke_categories as $category) {
             $c = new JokeCategory;
             $c->joke_id = $joke_id;
@@ -35,7 +35,10 @@ class JokeCategory extends Model {
             $c->save();}
         return true;}
 
-    public static function delete_jokecategory($joke_id) {
+    public static function delete_jokecategory_by_jokeid($joke_id) {
         return JokeCategory::where('joke_id', $joke_id)->delete();}
+
+    public static function delete_jokecategory_by_categoryid($category_id) {
+        return JokeCategory::where('category_id', $category_id)->delete();}        
 
 }

@@ -21,9 +21,9 @@
 
 			<p>
 			{% for category in joke.categories %}
-				{% for cat in category %}
-					<div class="category"><i class="fa fa-bookmark-o fa-1"></i> <a href="/jokes/categories/{{cat.id}}">{{cat.name}}</div>
-				{% endfor %}		
+
+					<div class="category"><i class="fa fa-bookmark-o fa-1"></i> <a href="/jokes/categories/{{category.id}}">{{category.name}}</div>
+
 			{% endfor %}
 			</p>
 				</div>				

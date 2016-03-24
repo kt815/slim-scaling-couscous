@@ -1,0 +1,8 @@
+<div class="container center-block">
+  <form class="form-signin" method="post" action="{{baseUrl() }}/admin/categories/delete/{{id}}">
+    <h2>Delete Category with id: {{id}}</h2>
+    <h3>Are you sure?</h3>  
+    <input type="hidden" name="_METHOD" value="DELETE"/>
+    <button class="btn btn-lg btn-primary" type="submit">Delete Category</button>
+  </form>
+</div>

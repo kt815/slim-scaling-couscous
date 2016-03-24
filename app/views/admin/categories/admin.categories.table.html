@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h2>List of categories</h2>
+
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th><span class="glyphicon glyphicon-th-large"></span></th>
+                        <th>Name</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for category in categories %}
+                        <tr>
+                            <td>{{loop.index}}</td>
+                            <td>{{category.name}}</td>
+                            <td><a href="{{ baseUrl() }}/admin/categories/edit/{{category.id}}">Edit</a> | <a href="{{ baseUrl() }}/admin/categories/delete/{{category.id}}">Delete</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+</div>
+</div>  

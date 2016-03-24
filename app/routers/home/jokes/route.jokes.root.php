@@ -80,8 +80,8 @@ $app->get('/jokes/:jokeId', function($jokeId) use ($app) {
     if($joke == NULL) {$error = 1;}
     else {$error = "";}
     $a = array($joke);
-    $arr = Jokes::view_jokes($a);   
-    $action = "Jokes"; 
+    $arr = Jokes::view_jokes($a);
+    $action = "Jokes";
     $app->render('joke.html', ['action' => $action, 'jokes' => $arr, 'menu' => $menu, 'error' => $error]);
 
 })->conditions(array('jokeId' => '\d+'));

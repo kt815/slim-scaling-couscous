@@ -21,8 +21,10 @@ function PaginatorObj() {
     function myForEach(callback) {
         var count = "";
         callback.forEach(function(item, i) {
-            item.forEach(function(a, b) {
-                    count += "<div class=\"category\"><i class=\"fa fa-bookmark-o fa-1\"><\/i> " + "<a href=\"" + a['id'] + "\">" + a['name'] + "<\/a>" + "<\/div>" }); });
+        
+            count += "<div class=\"category\"><i class=\"fa fa-bookmark-o fa-1\"><\/i> " + "<a href=\"" + item['id'] + "\">" + item['name'] + "<\/a>" + "<\/div>" 
+
+        });
         return(count); } // function myForEach
 
     function _addContent(data) {

@@ -9,7 +9,7 @@ use Models\Core\JokeCategory as JokeCategory;
 
 $app->group('/admin', function () use ($app, $isLogged, $isNoLogged) {
     $app->get('/jokes', $isNoLogged($app), function() use ($app) {
-	    $menu_top_nav = Menus::menu_admin();
+	$menu_top_nav = Menus::menu_admin();
         $jokes = Jokes::get_jokes();
         $arr =  Jokes::view_jokes($jokes);
         $action = "Jokes";
@@ -68,8 +68,8 @@ $app->group('/admin', function () use ($app, $isLogged, $isNoLogged) {
     $app->get('/jokes/edit/:id', $isNoLogged($app), function($id) use ($app) {
         $menu_top_nav = Menus::menu_admin();        
         $joke = Jokes::get_joke($id);
-        $categories = JokeCategory::get_categoriesid_by_jokeid($id);
-        if($joke){
+        $categories = JokeCategory::get_categoriesid_by_jokeid($id);        
+        if($joke){            
             $arr = [];
             foreach ($categories as $category) {            
                $arr[] = Category::get_category_by_id($category->category_id);}
@@ -107,8 +107,6 @@ $app->group('/admin', function () use ($app, $isLogged, $isNoLogged) {
         
         $joke = Jokes::update_joke($id, $title, $joketext, $author_id);
         $categories = JokeCategory::update_categories($joke_id, $joke_categories);        
-
-        // $author = Users::get_author($author_id);        
         $app->redirect('/admin/jokes');
     })->conditions(array('id' => '\d+'));
 

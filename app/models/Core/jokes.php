@@ -35,8 +35,9 @@ class Jokes extends Model {
         return $joke; } // function update_jokes
 
     public static function delete_joke($id) {
-        $joke = Jokes::find($id);
-        $jokeCategory = JokeCategory::find($id);} // function delete_jokes
+        Jokes::find($id)->delete();
+        JokeCategory::delete_jokecategory_by_jokeid($id);
+        } // function delete_jokes
 
     public static function get_jokes_by_author($id) {
         $jokes = Jokes::where('author_id', '=', $id)->orderBy('created_at')->get();

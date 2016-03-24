@@ -38,7 +38,14 @@
                     {% include 'admin/jokes/admin.jokes.edit.html' %}
                 {% elseif action == 'Joke Delete' %}
                     {% include 'admin/jokes/admin.jokes.delete.html' %}        
-
+                {% elseif action == 'Categories' %}
+                    {% include 'admin/Categories/admin.categories.table.html' %} 
+                {% elseif action == 'Categories New' %}
+                    {% include 'admin/Categories/admin.categories.new.html' %} 
+                {% elseif action == 'Category Edit' %}
+                    {% include 'admin/Categories/admin.categories.edit.html' %}
+                {% elseif action == 'Category Delete' %}
+                    {% include 'admin/Categories/admin.categories.delete.html' %}
                 {% endif %}
 
 
