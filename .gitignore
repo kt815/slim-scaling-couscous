@@ -4,6 +4,6 @@
 /.idea/*
 logs/output.txt
 .env
-logs/*
+/logs/*
 !logs/README.md
 /app/views/cache/
