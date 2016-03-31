@@ -10,7 +10,13 @@ __Slim skeleton inspiration__
 * Image processor
 * Custom logger
 
-Цель данного проекта, на базе Slim Framework реализовать работу ORM, REST, подключить jQuery, базовые возможности аутентификации и т.п.
+##### Цель данного проекта, на базе Slim Framework реализовать работу: 
+
+* ORM,
+* REST,
+* ajax jQuery, 
+* базовые возможности аутентификации
+* и т.п.
 
 
 ![Slim Scalling](http://res.cloudinary.com/comm1t/image/upload/v1459454473/ezgif.com-gif-maker_okrfup.gif)
