@@ -2,8 +2,6 @@ slim-scaling-couscous
 ==================
 __Slim skeleton inspiration__
 
-
-
 * Routing Engine
 * Views and Templates
 * ORM Database-managed sessions
@@ -12,20 +10,15 @@ __Slim skeleton inspiration__
 * Image processor
 * Custom logger
 
+Р¦РµР»СЊ РґР°РЅРЅРѕРіРѕ РїСЂРѕРµРєС‚Р°, РЅР° Р±Р°Р·Рµ Slim Framework СЂРµР°Р»РёР·РѕРІР°С‚СЊ СЂР°Р±РѕС‚Сѓ ORM, REST, РїРѕРґРєР»СЋС‡РёС‚СЊ jQuery, Р±Р°Р·РѕРІС‹Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё Р°СѓС‚РµРЅС‚РёС„РёРєР°С†РёРё Рё С‚.Рї.
 
-Цель данного проекта, на базе Slim Framework реализовать работу ORM, REST, подключить jQuery, базовые возможности аутентификации и т.п.
 
 ![Slim Scalling](http://res.cloudinary.com/comm1t/image/upload/v1459454473/ezgif.com-gif-maker_okrfup.gif)
 
 ##### Dependencies
-* PHP 5.4 
+* __PHP 5.4__
 * [__Slim Framework:__](https://github.com/codeguy/Slim) 2.*
 * [__Twig templates:__](https://github.com/fabpot/Twig) 1.*
 * [__Twitter Bootstrap:__](https://github.com/twbs/bootstrap) 3.*
 * [__Foundation Framework:__](http://foundation.zurb.com/) 3.*
-* [__jQuery Library__:](https://jquery.com/)
-
-
-##### License
-
-Slim Image Archive is released under the [MIT license](http://opensource.org/licenses/MIT).
+* [__jQuery Library__](https://jquery.com/)
