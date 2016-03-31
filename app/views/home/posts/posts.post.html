@@ -9,13 +9,14 @@
 	<div class="blog-post">
 		<h3><small>{{post.date}}</small></h3>
 		<img class="thumbnail" src="http://placehold.it/850x350">
-		<p>{{post.text}}</p>
+		<p>{{post.teaser|raw}}</p>
+		<p>{{post.text|raw}}</p>
 		<div class="callout">
 		<ul class="menu simple">
 			<li>Written by &nbsp;</li>
 			<li><a href="#"> {{post.author}} </a> </li>
 			<li>&nbsp;<small>{{post.date}}</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>
-			<li><a href="#comments">Comments(<strong>2</strong>)</a></li>
+			<li><a href="#comments">Comments(<strong>{{count}}</strong>)</a></li>
 		</ul>
 		</div>
 	</div>

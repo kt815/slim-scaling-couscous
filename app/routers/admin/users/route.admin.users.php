@@ -3,6 +3,7 @@
 use Models\Core\Posts as Posts;
 use Models\Core\Users as Users;
 use Models\Core\Menus as Menus;
+use Models\Core\Images as Images;
 
 $app->group('/admin', function () use ($app, $isLogged, $isNoLogged) {
 
@@ -20,8 +21,10 @@ $app->group('/admin', function () use ($app, $isLogged, $isNoLogged) {
 
     $app->get('/users/edit/:id', $isNoLogged($app), function($id) use ($app) {
 
-	$menu_top_nav = Menus::menu_admin();
-
+	    $menu_top_nav = Menus::menu_admin();
+        $images = Images::get_images($id);
+        $fotos = Images::get_image_foto($id);
+        $foto = $fotos->name;
         $flash = $app->view()->getData('flash');
         $error = isset($flash['error']) ? $flash['error'] : '';
         $success = isset($flash['success']) ? $flash['success'] : '';
@@ -29,7 +32,7 @@ $app->group('/admin', function () use ($app, $isLogged, $isNoLogged) {
         $action = "User Edit";
 
         $user = Users::where('id', '=', $id)->first();
-        $app->render('admin/admin.root.html', array('user' => $user, 'error' => $error, 'success' => $success, 'action' => $action, 'menu' => $menu_top_nav));
+        $app->render('admin/admin.root.html', array('user' => $user, 'error' => $error, 'success' => $success, 'action' => $action, 'menu' => $menu_top_nav, 'images' => $images, 'foto' => $foto));
     })->conditions(array('id' => '\d+'));
 
 
@@ -38,6 +41,7 @@ $app->group('/admin', function () use ($app, $isLogged, $isNoLogged) {
         $username = $app->request->post('username');
         $pass = $app->request->post('password');
         $password = hash('sha512', $pass);
+	$description = $app->request->post('description');
         $email = $app->request->post('email');
 
         if($username == "") {
@@ -50,9 +54,16 @@ $app->group('/admin', function () use ($app, $isLogged, $isNoLogged) {
         }
 
         if( !empty($pass) ) {
-            Users::where('id', '=', $id)->update(array('username' => $username, 'password' => $password, 'email' => $email));
+            Users::where('id', '=', $id)->update(array(
+		'username' => $username, 
+		'password' => $password, 
+		'email' => $email,
+		'description' => $description));
         } else {
-            Users::where('id', '=', $id)->update(array('username' => $username, 'email' => $email));
+            Users::where('id', '=', $id)->update(array(
+		'username' => $username, 
+		'email' => $email,
+		'description' => $description));
         }
 
         $app->flash('success', 1);

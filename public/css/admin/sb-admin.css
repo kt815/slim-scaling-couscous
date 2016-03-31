@@ -232,3 +232,35 @@ ul.alert-dropdown {
 width: 40% !important;
 
 }
+
+.admin_table {
+
+width: 200px;
+height: 150px;
+padding-top: 5px;
+padding-bottom: 5px;
+
+}
+
+.image_div {
+
+padding-top: 10px;
+padding-bottom: 10px;
+
+}
+
+.foto_lable {
+padding-right: 20px;}
+
+#img_edit{
+}
+
+.image_new{
+display:none;}
+
+
+span.lead  {
+    background: #1583CC;
+    color: white;
+}
+}

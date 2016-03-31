@@ -46,6 +46,22 @@
                     {% include 'admin/Categories/admin.categories.edit.html' %}
                 {% elseif action == 'Category Delete' %}
                     {% include 'admin/Categories/admin.categories.delete.html' %}
+
+
+                {% elseif action == 'Images' %}
+                    {% include 'admin/images/admin.images.table.html' %} 
+                {% elseif action == 'Image New' %}
+                    {% include 'admin/images/admin.images.new.html' %} 
+                {% elseif action == 'Image Edit' %}
+                    {% include 'admin/images/admin.images.edit.html' %}
+
+                {% elseif action == 'Foto Edit' %}
+                    {% include 'admin/images/admin.images.edit-foto.html' %}
+
+                {% elseif action == 'Image Delete' %}
+                    {% include 'admin/images/admin.images.delete.html' %}
+
+
                 {% endif %}
 
 

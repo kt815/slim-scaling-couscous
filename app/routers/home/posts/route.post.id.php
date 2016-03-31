@@ -18,12 +18,9 @@ $app->get('/post/:id', function($id) use ($app) {
         $post->date = date('d-m-Y H:i', $post->creation);
         $post->text = $app->markdown->parse($post->text);
         $comments = Comments::get_comments($id);
-        // kd($comments);
         $redirect = $app->request->getUrl() . $app->request->getPath();
-
-
-        // kd($post->title);
         $title = $post->title;
+        $count = count($comments);
 
         $app->render('home/posts/posts.post.html', 
             array(
@@ -32,7 +29,8 @@ $app->get('/post/:id', function($id) use ($app) {
                 'comments' => $comments, 
                 'redirect' => $redirect,
                 'title' => $title, 
-		'menu' => $menu
+		        'menu' => $menu,
+                'count' => $count
 
         ));
     }

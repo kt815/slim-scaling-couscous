@@ -5,15 +5,19 @@
 			<li role="menuitem"><a href="/"><i class="fa fa-home"></i> Главная </a></li>
 			<li role="menuitem"><a href="/jokes">Все шутки</a></li>
 			<li role="menuitem"><a href="/jokes/categories">Шутки по категориям</a></li>
+			<li role="menuitem"><a href="/users/10">Mike Makerson</a></li>
 		</ul>
 	</div>
 
 	<div class="top-bar-right">
 		<ul class="menu">
-			<li><a href="#">{{ menu.one }}</a></li>
-			<li><a href="#">{{ menu.two }}</a></li>
-			<li><a href="#">{{ menu.three }}</a></li>
-			<li><a href="#">{{ menu.four }}</a></li>
+
+
+			<li><a href="{{menu.one.url}}">{{ menu.one.name }}</a></li>
+			<li><a href="{{menu.two.url}}">{{ menu.two.name }}</a></li>
+			<li><a href="{{menu.three.url}}">{{ menu.three.name }}</a></li>
+			<li><a href="{{menu.four.url}}"><i class="fa fa-plus-square"></i>
+ {{ menu.four.name }}</a></li>
 
 		{%  if menu.username is not empty %}
 			<li><a href="/admin" class="button">Admin area</a></li>

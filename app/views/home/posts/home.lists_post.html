@@ -3,12 +3,12 @@
 <div class="blog-post">
 	<h3><a href="{{post.url}}">{{post.title}}</a> <small>{{post.date}}</small></h3>
 	<img class="thumbnail" src="http://placehold.it/850x350">
-	<p>{{post.text}}</p>
+	<p>{{post.teaser|raw}}</p>
 	<div class="callout">
 		<ul class="menu simple">
 			<li><a href="#">Author: {{post.author}}</a></li>
-			<li><a href="#">Comments: {{post.count}}</a></li>
-			<li><a href="{{post.url}}">Read more: {{post.count}}</a></li>
+			<li><a href="{{post.url}}#comments">Comments: {{post.count}}</a></li>
+			<li><a href="{{post.url}}">Read more ...</a></li>
 		</ul>
 	</div>
 </div>

@@ -7,10 +7,10 @@ use Models\Core\Users as Users;
 class Menus  {
 	
     public static function menu_home() {
-	$one = 'One';
-	$two = 'Two';
-	$three = 'Three';
-	$four = 'Four';
+	$one = ['name' => 'One', 'url' => '#' ];
+	$two = ['name' => 'Two', 'url' => '#' ];
+	$three = ['name' => 'Three', 'url' => '#' ];
+	$four = ['name' => 'Add Joke', 'url' => 'admin/jokes/new' ];
 	$username =  Users::get_username();
 
 	$menu = array(

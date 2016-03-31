@@ -14,4 +14,7 @@ class Comments extends Model {
         $comments = Comments::where('posts_id', '=', $id)->get();
         return $comments;
     }
+
+    public static function delete_comment_by_postid($id) {
+        Comments::where('posts_id', '=', $id)->delete();} // function comment_by_postid
 }

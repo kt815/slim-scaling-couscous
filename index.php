@@ -114,18 +114,56 @@ foreach(glob(ROUTERS_DIR . '*/*/*.php') as $router) {
 require_once(ROOT_APP . '/config.php');
 
 use Models\Core\Jokes as Jokes;
+use PHPImageWorkshop\ImageWorkshop;
   
 $app->get('/trial', function () use ($app) {
-	$id = 83;
-	$title = "Childrens !!!";
-	$joketext = "Womans !!!";
-	$author_id = 1;
 
-	
-	try {Jokes::delete_joke($id);} 
-	catch (Exception $e) {echo "ssss";}
 
-//	kd($var);
+$layer = ImageWorkshop::initFromPath(__DIR__.'/public/images/2016-02-02_10-23-35_56fba9af45236.png');
+
+$iw = $layer->getWidth(); 
+$ih = $layer->getHeight();
+
+
+$w_width = 1024;
+$w_height = 544;
+$x1 = 242;
+$y1 = 69; 
+$x2 = 850; 
+$y2 = 525;
+
+$x1p = ($x1*100)/$w_width;
+$y1p = ($y1*100)/$w_height;
+
+$w = $x2 - $x1;
+$h = $y2 - $y1;
+
+$wp = ($w*100)/$w_width;
+$hp = ($h*100)/$w_height;
+
+$layer->cropInPercent($wp, $hp, $x1p, $y1p, 'LT');
+
+
+$dirPath = __DIR__."/public/images";
+$filename = "cub.png";
+$createFolders = false;
+$backgroundColor = null; // transparent, only for PNG (otherwise it will be white if set null)
+$imageQuality = 95; // useless for GIF, usefull for PNG and JPEG (0 to 100%)
+ 
+$layer->save($dirPath, $filename, $createFolders, $backgroundColor, $imageQuality);
+
+kd("Hi");
+
+
 });
+
+
+$app->post('/trial', function () use ($app) {
+
+
+
+
+});
+
 
 $app->run();          	
