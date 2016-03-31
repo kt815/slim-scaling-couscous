@@ -6,9 +6,9 @@
 <h1>All Images<span class="lead">{{name}}</span></h1>
 
 {% for image in images %}     
-        <div class="col-md-3 col-sm-4 col-xs-6 image_div"><img class="img-responsive admin_table" src="http://slim.self/public/images/{{image.name}}" /><br>
-        <a href="http://slim.self/admin/images/edit/{{image.id}}" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-        <a href="http://slim.self/admin/images/delete/{{image.id}}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span> Delete</a>        
+        <div class="col-md-3 col-sm-4 col-xs-6 image_div"><img class="img-responsive admin_table" src="{{ baseUrl() }}/public/images/{{image.name}}" /><br>
+        <a href="{{ baseUrl() }}/admin/images/edit/{{image.id}}" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+        <a href="{{ baseUrl() }}/admin/images/delete/{{image.id}}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span> Delete</a>        
         </div>
 {% endfor %}                
 

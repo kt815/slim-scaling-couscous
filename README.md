@@ -1,27 +1,31 @@
-# slim-scaling-couscous
-
-Slim skeleton inspiration
-
-
-## Requirements for deploying
-
-The deploying assumes that you have:
-
-* [a free Heroku account](https://signup.heroku.com/signup/dc).
-* [PHP installed locally](http://php.net/).
-* [Composer installed](https://getcomposer.org/doc/00-intro.md).
+slim-scaling-couscous
+==================
+__Slim skeleton inspiration__
 
 
-## Deploying
 
-Install the [Heroku Toolbelt](https://toolbelt.heroku.com/).
+* Routing Engine
+* Views and Templates
+* ORM Database-managed sessions
+* Blog Example
+* Markdown-to-HTML converter
+* Image processor
+* Custom logger
 
-```sh
-$ git clone git@github.com:kt815/slim-scaling-couscous.git # or clone your own fork
-$ cd slim-scaling-couscous
-$ heroku create
-$ git push heroku master
-$ heroku open
-```
 
-This code has deployed in heroku [slim-scaling-couscous](https://agile-sierra-78177.herokuapp.com).
+Цель данного проекта, на базе Slim Framework реализовать работу ORM, REST, подключить jQuery, базовые возможности аутентификации и т.п.
+
+![Slim Scalling](http://res.cloudinary.com/comm1t/image/upload/v1459454473/ezgif.com-gif-maker_okrfup.gif)
+
+##### Dependencies
+* PHP 5.4 
+* [__Slim Framework:__](https://github.com/codeguy/Slim) 2.*
+* [__Twig templates:__](https://github.com/fabpot/Twig) 1.*
+* [__Twitter Bootstrap:__](https://github.com/twbs/bootstrap) 3.*
+* [__Foundation Framework:__](http://foundation.zurb.com/) 3.*
+* [__jQuery Library__:](https://jquery.com/)
+
+
+##### License
+
+Slim Image Archive is released under the [MIT license](http://opensource.org/licenses/MIT).

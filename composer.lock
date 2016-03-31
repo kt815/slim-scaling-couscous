@@ -55,73 +55,6 @@
             "time": "2013-07-07 17:01:41"
         },
         {
-            "name": "doctrine/inflector",
-            "version": "v1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/doctrine/inflector.git",
-                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/90b2128806bfde671b6952ab8bea493942c1fdae",
-                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.*"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-0": {
-                    "Doctrine\\Common\\Inflector\\": "lib/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Roman Borschel",
-                    "email": "roman@code-factory.org"
-                },
-                {
-                    "name": "Benjamin Eberlei",
-                    "email": "kontakt@beberlei.de"
-                },
-                {
-                    "name": "Guilherme Blanco",
-                    "email": "guilhermeblanco@gmail.com"
-                },
-                {
-                    "name": "Jonathan Wage",
-                    "email": "jonwage@gmail.com"
-                },
-                {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com"
-                }
-            ],
-            "description": "Common String Manipulations with regard to casing and singular/plural rules.",
-            "homepage": "http://www.doctrine-project.org",
-            "keywords": [
-                "inflection",
-                "pluralize",
-                "singularize",
-                "string"
-            ],
-            "time": "2015-11-06 14:35:42"
-        },
-        {
             "name": "erusev/parsedown",
             "version": "1.6.0",
             "source": {
@@ -162,31 +95,34 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v5.2.27",
+            "version": "v4.1.30",
+            "target-dir": "Illuminate/Container",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
-                "reference": "1e156f8017490f5583ab161030bf839c77c95e54"
+                "reference": "5b76abf9138fe1ad99788944e0561ebc655a254f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/container/zipball/1e156f8017490f5583ab161030bf839c77c95e54",
-                "reference": "1e156f8017490f5583ab161030bf839c77c95e54",
+                "url": "https://api.github.com/repos/illuminate/container/zipball/5b76abf9138fe1ad99788944e0561ebc655a254f",
+                "reference": "5b76abf9138fe1ad99788944e0561ebc655a254f",
                 "shasum": ""
             },
             "require": {
-                "illuminate/contracts": "5.2.*",
-                "php": ">=5.5.9"
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.0.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.2-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Illuminate\\Container\\": ""
+                "psr-0": {
+                    "Illuminate\\Container": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -196,93 +132,53 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
+                    "email": "taylorotwell@gmail.com",
+                    "homepage": "https://github.com/taylorotwell",
+                    "role": "Creator of Laravel"
                 }
             ],
-            "description": "The Illuminate Container package.",
-            "homepage": "http://laravel.com",
-            "time": "2016-03-16 17:19:17"
-        },
-        {
-            "name": "illuminate/contracts",
-            "version": "v5.2.27",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/illuminate/contracts.git",
-                "reference": "411b851962c211078ade7664a6976e77a78cd2a5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/411b851962c211078ade7664a6976e77a78cd2a5",
-                "reference": "411b851962c211078ade7664a6976e77a78cd2a5",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.5.9"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "5.2-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Illuminate\\Contracts\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
-                }
-            ],
-            "description": "The Illuminate Contracts package.",
-            "homepage": "http://laravel.com",
-            "time": "2016-03-07 20:37:17"
+            "time": "2014-05-22 21:07:57"
         },
         {
             "name": "illuminate/database",
-            "version": "v5.2.27",
+            "version": "v4.1.30",
+            "target-dir": "Illuminate/Database",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "1b021f63226e2188711c3f419defa1138c2f605f"
+                "reference": "d6c2bffdc04d2d73b6ae82aab10647ddbda1daab"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/1b021f63226e2188711c3f419defa1138c2f605f",
-                "reference": "1b021f63226e2188711c3f419defa1138c2f605f",
+                "url": "https://api.github.com/repos/illuminate/database/zipball/d6c2bffdc04d2d73b6ae82aab10647ddbda1daab",
+                "reference": "d6c2bffdc04d2d73b6ae82aab10647ddbda1daab",
                 "shasum": ""
             },
             "require": {
-                "illuminate/container": "5.2.*",
-                "illuminate/contracts": "5.2.*",
-                "illuminate/support": "5.2.*",
-                "nesbot/carbon": "~1.20",
-                "php": ">=5.5.9"
+                "illuminate/container": "4.1.*",
+                "illuminate/events": "4.1.*",
+                "illuminate/support": "4.1.*",
+                "nesbot/carbon": "1.*",
+                "php": ">=5.3.0"
             },
-            "suggest": {
-                "doctrine/dbal": "Required to rename columns and drop SQLite columns (~2.4).",
-                "fzaninotto/faker": "Required to use the eloquent factory builder (~1.4).",
-                "illuminate/console": "Required to use the database commands (5.2.*).",
-                "illuminate/events": "Required to use the observers with Eloquent (5.2.*).",
-                "illuminate/filesystem": "Required to use the migrations (5.2.*).",
-                "illuminate/pagination": "Required to paginate the result set (5.2.*)."
+            "require-dev": {
+                "illuminate/cache": "4.1.*",
+                "illuminate/console": "4.1.*",
+                "illuminate/filesystem": "4.1.*",
+                "illuminate/pagination": "4.1.*",
+                "illuminate/support": "4.1.*",
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "4.0.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.2-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Illuminate\\Database\\": ""
+                "psr-0": {
+                    "Illuminate\\Database": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -292,59 +188,104 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
+                    "email": "taylorotwell@gmail.com",
+                    "homepage": "https://github.com/taylorotwell",
+                    "role": "Creator of Laravel"
                 }
             ],
-            "description": "The Illuminate Database package.",
-            "homepage": "http://laravel.com",
             "keywords": [
                 "database",
                 "laravel",
                 "orm",
                 "sql"
             ],
-            "time": "2016-03-29 13:26:26"
+            "time": "2014-06-01 01:57:51"
         },
         {
-            "name": "illuminate/support",
-            "version": "v5.2.27",
+            "name": "illuminate/events",
+            "version": "v4.1.30",
+            "target-dir": "Illuminate/Events",
             "source": {
                 "type": "git",
-                "url": "https://github.com/illuminate/support.git",
-                "reference": "b8d2131e38fc26e42f742c7af68de1ca726a545c"
+                "url": "https://github.com/illuminate/events.git",
+                "reference": "4e83ee4f255ec084d510e533ef8e98961aae8729"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/b8d2131e38fc26e42f742c7af68de1ca726a545c",
-                "reference": "b8d2131e38fc26e42f742c7af68de1ca726a545c",
+                "url": "https://api.github.com/repos/illuminate/events/zipball/4e83ee4f255ec084d510e533ef8e98961aae8729",
+                "reference": "4e83ee4f255ec084d510e533ef8e98961aae8729",
                 "shasum": ""
             },
             "require": {
-                "doctrine/inflector": "~1.0",
-                "ext-mbstring": "*",
-                "illuminate/contracts": "5.2.*",
-                "paragonie/random_compat": "~1.4",
-                "php": ">=5.5.9"
+                "illuminate/container": "4.1.*",
+                "illuminate/support": "4.1.*",
+                "php": ">=5.3.0"
             },
-            "suggest": {
-                "illuminate/filesystem": "Required to use the composer class (5.2.*).",
-                "jeremeamia/superclosure": "Required to be able to serialize closures (~2.2).",
-                "symfony/polyfill-php56": "Required to use the hash_equals function on PHP 5.5 (~1.0).",
-                "symfony/process": "Required to use the composer class (2.8.*|3.0.*).",
-                "symfony/var-dumper": "Improves the dd function (2.8.*|3.0.*)."
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "4.0.*"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "5.2-dev"
+                    "dev-master": "4.1-dev"
                 }
             },
             "autoload": {
-                "psr-4": {
-                    "Illuminate\\Support\\": ""
+                "psr-0": {
+                    "Illuminate\\Events": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com",
+                    "homepage": "https://github.com/taylorotwell",
+                    "role": "Creator of Laravel"
+                }
+            ],
+            "time": "2014-03-22 20:12:48"
+        },
+        {
+            "name": "illuminate/support",
+            "version": "v4.1.30",
+            "target-dir": "Illuminate/Support",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/illuminate/support.git",
+                "reference": "205a132f7d5e5222d23e17d49ad922bf349d240e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/205a132f7d5e5222d23e17d49ad922bf349d240e",
+                "reference": "205a132f7d5e5222d23e17d49ad922bf349d240e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "jeremeamia/superclosure": "1.0.*",
+                "mockery/mockery": "0.9.*",
+                "patchwork/utf8": "1.1.*",
+                "phpunit/phpunit": "4.0.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "4.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Illuminate\\Support": ""
                 },
                 "files": [
-                    "helpers.php"
+                    "Illuminate/Support/helpers.php"
                 ]
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -354,12 +295,12 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
+                    "email": "taylorotwell@gmail.com",
+                    "homepage": "https://github.com/taylorotwell",
+                    "role": "Creator of Laravel"
                 }
             ],
-            "description": "The Illuminate Support package.",
-            "homepage": "http://laravel.com",
-            "time": "2016-03-29 11:17:27"
+            "time": "2014-05-30 16:22:08"
         },
         {
             "name": "monolog/monolog",
@@ -538,54 +479,6 @@
                 "var_dump"
             ],
             "time": "2014-02-26 21:10:16"
-        },
-        {
-            "name": "paragonie/random_compat",
-            "version": "v1.4.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "c7e26a21ba357863de030f0b9e701c7d04593774"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/c7e26a21ba357863de030f0b9e701c7d04593774",
-                "reference": "c7e26a21ba357863de030f0b9e701c7d04593774",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.2.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.*|5.*"
-            },
-            "suggest": {
-                "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "lib/random.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Paragon Initiative Enterprises",
-                    "email": "security@paragonie.com",
-                    "homepage": "https://paragonie.com"
-                }
-            ],
-            "description": "PHP 5.x polyfill for random_bytes() and random_int() from PHP 7",
-            "keywords": [
-                "csprng",
-                "pseudorandom",
-                "random"
-            ],
-            "time": "2016-03-18 20:34:03"
         },
         {
             "name": "phpmailer/phpmailer",
@@ -904,30 +797,30 @@
         },
         {
             "name": "symfony/translation",
-            "version": "v3.0.3",
+            "version": "v2.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "2de0b6f7ebe43cffd8a06996ebec6aab79ea9e91"
+                "reference": "d60b8e076d22953aabebeebda53bf334438e7aca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/2de0b6f7ebe43cffd8a06996ebec6aab79ea9e91",
-                "reference": "2de0b6f7ebe43cffd8a06996ebec6aab79ea9e91",
+                "url": "https://api.github.com/repos/symfony/translation/zipball/d60b8e076d22953aabebeebda53bf334438e7aca",
+                "reference": "d60b8e076d22953aabebeebda53bf334438e7aca",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.5.9",
+                "php": ">=5.3.9",
                 "symfony/polyfill-mbstring": "~1.0"
             },
             "conflict": {
-                "symfony/config": "<2.8"
+                "symfony/config": "<2.7"
             },
             "require-dev": {
                 "psr/log": "~1.0",
-                "symfony/config": "~2.8|~3.0",
-                "symfony/intl": "~2.8|~3.0",
-                "symfony/yaml": "~2.8|~3.0"
+                "symfony/config": "~2.8",
+                "symfony/intl": "~2.4|~3.0.0",
+                "symfony/yaml": "~2.2|~3.0.0"
             },
             "suggest": {
                 "psr/log": "To use logging capability in translator",
@@ -937,7 +830,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.0-dev"
+                    "dev-master": "2.8-dev"
                 }
             },
             "autoload": {
@@ -964,7 +857,7 @@
             ],
             "description": "Symfony Translation Component",
             "homepage": "https://symfony.com",
-            "time": "2016-02-02 13:44:19"
+            "time": "2016-03-25 01:40:30"
         },
         {
             "name": "twig/twig",

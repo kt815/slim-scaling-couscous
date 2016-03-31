@@ -53,7 +53,7 @@
 <br><br><br><br><br>
 <img src="{{ baseUrl() }}/public/images/trumb_{{foto}}">
 <br><br>
-<a href="http://slim.self/admin/images/edit/foto/{{user.id}}" class="btn btn-primary btn-lg"><span class="fa fa-plus"></span> Edit Foto</a>
+<a href="{{ baseUrl() }}/admin/images/edit/foto/{{user.id}}" class="btn btn-primary btn-lg"><span class="fa fa-plus"></span> Edit Foto</a>
 
     </div>        
 </div>
@@ -61,16 +61,16 @@
 <h2>{{user.username}} Images</h2>
 <br>
 <br>
-<a href="http://slim.self/admin/images/new" class="btn btn-primary btn-lg"><span class="fa fa-plus"></span> Upload New Image</a>
+<a href="{{ baseUrl() }}/admin/images/new" class="btn btn-primary btn-lg"><span class="fa fa-plus"></span> Upload New Image</a>
 <br>
 
 <div class="container">
     <div class="row">
 
 {% for image in images %}     
-        <div class="col-md-3 col-sm-4 col-xs-6 image_div"><img class="img-responsive admin_table" src="http://slim.self/public/images/{{image.name}}" /><br>
-        <a href="http://slim.self/admin/images/edit/{{image.id}}" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-edit"></span> Edit</a>
-        <a href="http://slim.self/admin/images/delete/{{image.id}}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span> Delete</a>        
+        <div class="col-md-3 col-sm-4 col-xs-6 image_div"><img class="img-responsive admin_table" src="{{ baseUrl() }}/public/images/{{image.name}}" /><br>
+        <a href="{{ baseUrl() }}/admin/images/edit/{{image.id}}" class="btn btn-primary btn-xs"><span class="glyphicon glyphicon-edit"></span> Edit</a>
+        <a href="{{ baseUrl() }}/admin/images/delete/{{image.id}}" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-trash"></span> Delete</a>        
         </div>
 {% endfor %}                
 
